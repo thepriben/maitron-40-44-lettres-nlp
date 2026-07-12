@@ -4,7 +4,7 @@ Chaîne complète de traitement automatique du langage naturel appliquée aux **
 
 ## Le livre
 
-Ce dépôt est le projet de fin (chapitre 13) du livre :
+Ce dépôt constitue le chapitre 13 — le projet final — du livre :
 
 > **Benoît Prieur**, *Traitement automatique du langage naturel avec Python — Le NLP avec spaCy et NLTK*, Éditions ENI, collection Epsilon, 2024, ISBN 978-2-409-04498-4.
 > [Page du livre sur le site des Éditions ENI](https://www.editions-eni.fr/livre/traitement-automatique-du-langage-naturel-avec-python-le-nlp-avec-spacy-et-nltk-9782409044984)

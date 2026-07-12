@@ -74,6 +74,22 @@ ENTITY_STOP = {
     "chers", "amis", "ps", "chers parents", "chers amis", "vive la france",
     "chéris", "mes chers", "mes chers parents", "soyez", "embrasse",
     "allemands", "boches", "vive la france immortelle",
+    "humanité et tu me rappelleras", "remerciez", "interné résistant",
+    "cher papa", "chère maman", "rosita",
+}
+
+# Variantes d'une même organisation ramenées à une forme canonique
+# (dans ces lettres, « le Parti » désigne toujours le Parti communiste).
+ORG_ALIASES = {
+    "parti": "Parti communiste",
+    "parti communiste": "Parti communiste",
+    "parti communiste français": "Parti communiste",
+    "pcf": "Parti communiste",
+    "communiste": "Parti communiste",
+    "jeunesses communistes": "Jeunesses communistes",
+    "jeunes communistes": "Jeunesses communistes",
+    "jeunesse communiste": "Jeunesses communistes",
+    "armée rouge": "Armée rouge",
 }
 
 MONTHS_FR = {
@@ -318,6 +334,8 @@ LEADING_ARTICLE_RE = re.compile(r"^(?:la|le|les|de|du|des)\s+", flags=re.IGNOREC
 
 def clean_entity(text: str, strip_article: bool = False) -> str:
     text = ELISION_RE.sub("", normalize(text))
+    # Coupe à la première ponctuation forte (« Parti Communiste ! Adieu » -> « Parti Communiste »).
+    text = re.split(r"[!?;]", text)[0]
     text = text.strip(" \n\t.,;:!?«»\"'’ʼ()")
     text = re.sub(r"\s+", " ", text)
     if strip_article:
@@ -442,7 +460,7 @@ def main() -> None:
             elif ent.label_ == "PER":
                 per_freq.add(value)
             elif ent.label_ == "ORG":
-                org_freq.add(value)
+                org_freq.add(ORG_ALIASES.get(value.casefold(), value))
 
     doc_freq = Counter({word: len(docs) for word, docs in word_in_docs.items()})
 

@@ -63,13 +63,35 @@ def parse_index(html: str) -> List[Tuple[str, str]]:
 
 
 def extract_letters(soup: BeautifulSoup) -> str:
+    """Texte de la lettre. Le balisage du Maitron est incohérent, d'où les replis :
+    1. <blockquote class="poesie"> (cas général) ;
+    2. balise littérale <poesie> (raccourci SPIP non rendu sur certaines fiches) ;
+    3. <blockquote> sans classe ;
+    4. long passage en italique dans le corps de la notice.
+    """
     blocks = soup.find_all("blockquote", class_="poesie")
+    if not blocks:
+        blocks = soup.find_all("poesie")
+    if not blocks:
+        blocks = soup.find_all("blockquote")
     texts = []
     for block in blocks:
         text = block.get_text("\n", strip=True)
         if text:
             texts.append(text)
-    return "\n\n".join(texts).strip()
+    if texts:
+        return "\n\n".join(texts).strip()
+
+    body = soup.find("div", class_="texte")
+    if body:
+        italics = [
+            tag.get_text("\n", strip=True)
+            for tag in body.find_all(["em", "i"])
+            if len(tag.get_text(strip=True)) >= 400
+        ]
+        if italics:
+            return "\n\n".join(italics).strip()
+    return ""
 
 
 def extract_bio(soup: BeautifulSoup) -> str:
