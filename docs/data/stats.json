@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-12T06:02:07.901717+00:00",
+ "generated_at": "2026-07-12T06:21:09.588902+00:00",
  "source_url": "https://fusilles-40-44.maitron.fr/yzfusillesdivers/1-lettres-de-fusilles/",
  "model": "fr_core_news_lg",
  "summary": {
@@ -1746,10 +1746,6 @@
     "count": 1
    },
    {
-    "word": "Police",
-    "count": 1
-   },
-   {
     "word": "ministère des Anciens Combattants",
     "count": 1
    },
@@ -1762,19 +1758,23 @@
     "count": 1
    },
    {
-    "word": "Toto",
+    "word": "Fraternité humaine",
     "count": 1
    },
    {
-    "word": "Parents",
+    "word": "Société des Anciens élèves",
     "count": 1
    },
    {
-    "word": "IR",
+    "word": "Francs-tireurs et partisans",
     "count": 1
    },
    {
-    "word": "Eglise",
+    "word": "Brigade spéciale",
+    "count": 1
+   },
+   {
+    "word": "Jeunes Français",
     "count": 1
    }
   ]

@@ -79,7 +79,10 @@ ENTITY_STOP = {
 }
 
 # Faux positifs propres au type ORG (prénoms en capitales, lieux, formules).
-ORG_STOP = {"robert", "europe", "catholique français", "liberté", "france", "libération", "alex"}
+ORG_STOP = {
+    "robert", "europe", "catholique français", "liberté", "france",
+    "libération", "alex", "ir", "chers copains",
+}
 
 # Variantes d'une même organisation ramenées à une forme canonique
 # (dans ces lettres, « le Parti » désigne toujours le Parti communiste).
@@ -94,6 +97,8 @@ ORG_ALIASES = {
     "jeunesse communiste": "Jeunesses communistes",
     "armée rouge": "Armée rouge",
     "union soviétique": "URSS",
+    "tireurs partisans": "Francs-tireurs et partisans",
+    "francs-tireurs et partisans": "Francs-tireurs et partisans",
 }
 
 MONTHS_FR = {
@@ -614,7 +619,14 @@ def main() -> None:
         "entities": {
             "locations": [{"word": w, "count": c} for w, c in loc_freq.most_common(25)],
             "persons": [{"word": w, "count": c} for w, c in per_freq.most_common(20)],
-            "organisations": [{"word": w, "count": c} for w, c in org_freq.most_common(15)],
+            # Les hapax en un seul mot hors sigles (« Toto », « Police »…) sont
+            # des faux positifs du NER : on ne garde un singleton que s'il est
+            # multi-mots ou en capitales (SNCF, FFI…).
+            "organisations": [
+                {"word": w, "count": c}
+                for w, c in org_freq.most_common(30)
+                if c > 1 or " " in w or w.isupper()
+            ][:15],
         },
         "figures": figures,
         "phrase_stats": phrase_list,
