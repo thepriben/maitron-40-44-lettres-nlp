@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lettres de fusillés — Maitron 1940-1944</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="eyebrow">Projet NLP — Chapitre 13</p>
+      <h1>Lettres de fusillés</h1>
+      <p class="subtitle">Corpus du Maitron 1940-1944 — inspection et analyse textuelle</p>
+      <p class="meta" id="meta-date"></p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel" id="summary">
+      <h2>Vue d'ensemble</h2>
+      <div class="stats-grid" id="stats-grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Répartition par initiale</h2>
+      <div class="bar-chart" id="letter-chart"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Lexique</h2>
+      <div class="tabs">
+        <button class="tab active" data-tab="words">Mots fréquents</button>
+        <button class="tab" data-tab="nouns">Noms</button>
+        <button class="tab" data-tab="verbs">Verbes</button>
+        <button class="tab" data-tab="adjectives">Adjectifs</button>
+        <button class="tab" data-tab="phrases">Expressions</button>
+      </div>
+      <div class="tab-panel active" id="tab-words"></div>
+      <div class="tab-panel" id="tab-nouns"></div>
+      <div class="tab-panel" id="tab-verbs"></div>
+      <div class="tab-panel" id="tab-adjectives"></div>
+      <div class="tab-panel" id="tab-phrases"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Entités nommées (spaCy)</h2>
+      <div class="tabs">
+        <button class="tab active" data-etab="locations">Lieux</button>
+        <button class="tab" data-etab="persons">Personnes</button>
+        <button class="tab" data-etab="organisations">Organisations</button>
+      </div>
+      <div class="tab-panel active" id="etab-locations"></div>
+      <div class="tab-panel" id="etab-persons"></div>
+      <div class="tab-panel" id="etab-organisations"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Thèmes latents (LDA)</h2>
+      <div class="clusters" id="topics"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Regroupements (K-means, k=2)</h2>
+      <div class="clusters" id="clusters"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Concordancier</h2>
+        <label class="search">
+          <span class="sr-only">Mot à rechercher</span>
+          <input type="search" id="kwic-input" placeholder="ex. maman, courage, dieu…" autocomplete="off">
+        </label>
+      </div>
+      <p class="hint">Contexte d'apparition d'un mot dans l'ensemble des lettres.</p>
+      <div id="kwic-results" class="kwic"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Corpus</h2>
+        <label class="search">
+          <span class="sr-only">Rechercher</span>
+          <input type="search" id="search" placeholder="Nom, texte…" autocomplete="off">
+        </label>
+      </div>
+      <p class="hint" id="corpus-hint"></p>
+      <div class="table-wrap">
+        <table id="corpus-table">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Initiale</th>
+              <th>Mots</th>
+              <th>Groupe</th>
+              <th>Lettre</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="letter-dialog">
+    <form method="dialog">
+      <button class="close" aria-label="Fermer">×</button>
+    </form>
+    <h3 id="dialog-name"></h3>
+    <p class="dialog-meta" id="dialog-meta"></p>
+    <pre id="dialog-text"></pre>
+    <p class="dialog-link"><a id="dialog-url" href="#" target="_blank" rel="noopener">Voir la fiche Maitron</a></p>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>
+        Source : <a href="https://fusilles-40-44.maitron.fr/yzfusillesdivers/1-lettres-de-fusilles/" target="_blank" rel="noopener">Maitron — Lettres de fusillés</a>.
+        Projet issu du livre <em>Traitement automatique du langage naturel avec Python</em> (Éditions ENI).
+      </p>
+      <p><a href="https://github.com/thepriben/maitron-40-44-lettres">thepriben/maitron-40-44-lettres</a></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
