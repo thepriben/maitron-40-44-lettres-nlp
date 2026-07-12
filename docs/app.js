@@ -159,6 +159,7 @@ function renderMap(stats) {
     return;
   }
   const map = L.map("map", { scrollWheelZoom: false }).setView([47.5, 2.5], 5.4);
+  map.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
   L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
     maxZoom: 12,
