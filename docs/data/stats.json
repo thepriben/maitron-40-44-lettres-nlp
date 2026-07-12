@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-12T05:49:19.224323+00:00",
+ "generated_at": "2026-07-12T06:02:07.901717+00:00",
  "source_url": "https://fusilles-40-44.maitron.fr/yzfusillesdivers/1-lettres-de-fusilles/",
  "model": "fr_core_news_lg",
  "summary": {
@@ -1722,12 +1722,12 @@
     "count": 32
    },
    {
-    "word": "Gestapo",
+    "word": "URSS",
     "count": 6
    },
    {
-    "word": "URSS",
-    "count": 4
+    "word": "Gestapo",
+    "count": 6
    },
    {
     "word": "Jeunesses communistes",
@@ -1738,31 +1738,7 @@
     "count": 3
    },
    {
-    "word": "Union Soviétique",
-    "count": 2
-   },
-   {
-    "word": "Libération",
-    "count": 2
-   },
-   {
-    "word": "Liberté",
-    "count": 2
-   },
-   {
-    "word": "EUROPE",
-    "count": 1
-   },
-   {
-    "word": "ROBERT",
-    "count": 1
-   },
-   {
     "word": "Cour Martiale allemande",
-    "count": 1
-   },
-   {
-    "word": "Catholique Français",
     "count": 1
    },
    {
@@ -1774,7 +1750,31 @@
     "count": 1
    },
    {
-    "word": "BAUDRY",
+    "word": "ministère des Anciens Combattants",
+    "count": 1
+   },
+   {
+    "word": "FFI",
+    "count": 1
+   },
+   {
+    "word": "Arts et Métiers",
+    "count": 1
+   },
+   {
+    "word": "Toto",
+    "count": 1
+   },
+   {
+    "word": "Parents",
+    "count": 1
+   },
+   {
+    "word": "IR",
+    "count": 1
+   },
+   {
+    "word": "Eglise",
     "count": 1
    }
   ]

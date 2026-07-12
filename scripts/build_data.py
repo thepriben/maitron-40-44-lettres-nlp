@@ -78,6 +78,9 @@ ENTITY_STOP = {
     "cher papa", "chère maman", "rosita",
 }
 
+# Faux positifs propres au type ORG (prénoms en capitales, lieux, formules).
+ORG_STOP = {"robert", "europe", "catholique français", "liberté", "france", "libération", "alex"}
+
 # Variantes d'une même organisation ramenées à une forme canonique
 # (dans ces lettres, « le Parti » désigne toujours le Parti communiste).
 ORG_ALIASES = {
@@ -90,6 +93,7 @@ ORG_ALIASES = {
     "jeunes communistes": "Jeunesses communistes",
     "jeunesse communiste": "Jeunesses communistes",
     "armée rouge": "Armée rouge",
+    "union soviétique": "URSS",
 }
 
 MONTHS_FR = {
@@ -460,6 +464,12 @@ def main() -> None:
             elif ent.label_ == "PER":
                 per_freq.add(value)
             elif ent.label_ == "ORG":
+                if value.casefold() in ORG_STOP:
+                    continue
+                # Un nom de famille en capitales n'est pas une organisation
+                # (les vrais sigles — URSS, SNCF, CGT… — font 5 lettres ou moins).
+                if value.isupper() and " " not in value and len(value) > 5 and value != "GESTAPO":
+                    continue
                 org_freq.add(ORG_ALIASES.get(value.casefold(), value))
 
     doc_freq = Counter({word: len(docs) for word, docs in word_in_docs.items()})
