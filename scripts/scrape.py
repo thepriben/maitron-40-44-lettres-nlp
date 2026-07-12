@@ -62,8 +62,7 @@ def parse_index(html: str) -> List[Tuple[str, str]]:
     return people
 
 
-def extract_letters(html: str) -> str:
-    soup = BeautifulSoup(html, "html.parser")
+def extract_letters(soup: BeautifulSoup) -> str:
     blocks = soup.find_all("blockquote", class_="poesie")
     texts = []
     for block in blocks:
@@ -73,13 +72,21 @@ def extract_letters(html: str) -> str:
     return "\n\n".join(texts).strip()
 
 
+def extract_bio(soup: BeautifulSoup) -> str:
+    """Chapô de la notice : « Né le … à …, fusillé le … ; profession ; engagement. »"""
+    chapo = soup.find("div", class_="chapo")
+    if not chapo:
+        return ""
+    return chapo.get_text(" ", strip=True)
+
+
 def main() -> None:
     OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
     total = 0
 
     with OUT_CSV.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle)
-        writer.writerow(["first_letter", "person_name", "person_url", "letter_text"])
+        writer.writerow(["first_letter", "person_name", "person_url", "bio", "letter_text"])
 
         for letter in LETTERS:
             index_url = f"{INDEX}?first_l={letter}"
@@ -95,8 +102,13 @@ def main() -> None:
             for index, (name, url) in enumerate(people, start=1):
                 print(f"[INFO] ({letter}) [{index}/{len(people)}] {name}")
                 person_html = fetch(url)
-                letter_text = extract_letters(person_html) if person_html else ""
-                writer.writerow([letter, name, url, letter_text])
+                if person_html:
+                    soup = BeautifulSoup(person_html, "html.parser")
+                    bio = extract_bio(soup)
+                    letter_text = extract_letters(soup)
+                else:
+                    bio, letter_text = "", ""
+                writer.writerow([letter, name, url, bio, letter_text])
                 total += 1
 
     print(f"[DONE] {total} fiches écrites dans {OUT_CSV}")

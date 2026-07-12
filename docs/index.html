@@ -3,102 +3,263 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lettres de fusillés — Maitron 1940-1944</title>
+  <title>Lettres de fusillés — analyse NLP du corpus du Maitron 1940-1944</title>
+  <meta name="description" content="Analyse par traitement automatique du langage des dernières lettres de fusillés publiées par le Maitron 1940-1944 : lexique, entités nommées, thèmes, chronologie, carte des lieux d'exécution.">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
-      <p class="eyebrow">Projet NLP — Chapitre 13</p>
-      <h1>Lettres de fusillés</h1>
-      <p class="subtitle">Corpus du Maitron 1940-1944 — inspection et analyse textuelle</p>
+      <p class="eyebrow">Humanités numériques · Traitement automatique du langage</p>
+      <h1>Les dernières lettres de fusillés<br>1940-1944</h1>
+      <p class="subtitle">
+        Analyse NLP du corpus des lettres publiées par le
+        <a href="https://fusilles-40-44.maitron.fr/yzfusillesdivers/1-lettres-de-fusilles/" target="_blank" rel="noopener">Maitron des fusillés</a> :
+        lexique, entités, thèmes, chronologie et géographie des exécutions.
+      </p>
       <p class="meta" id="meta-date"></p>
     </div>
   </header>
 
+  <nav class="toc" id="toc">
+    <div class="wrap">
+      <a href="#corpus">Le corpus</a>
+      <a href="#chronologie">Chronologie</a>
+      <a href="#carte">Carte</a>
+      <a href="#profils">Profils</a>
+      <a href="#lexique">Lexique</a>
+      <a href="#entites">Entités</a>
+      <a href="#references">Références</a>
+      <a href="#engagement">Engagements</a>
+      <a href="#themes">Thèmes</a>
+      <a href="#concordancier">Concordancier</a>
+      <a href="#lettres">Les lettres</a>
+      <a href="#methode">Méthode</a>
+    </div>
+  </nav>
+
   <main class="wrap">
-    <section class="panel" id="summary">
-      <h2>Vue d'ensemble</h2>
+
+    <section class="panel" id="corpus">
+      <h2>Le corpus</h2>
+      <p class="explain" id="corpus-note"></p>
       <div class="stats-grid" id="stats-grid"></div>
+      <div class="chart-box">
+        <h3>Distribution des longueurs de lettres</h3>
+        <p class="explain">La plupart des lettres sont brèves — écrites dans les heures précédant l'exécution —
+        mais certaines dépassent le millier de mots : testaments politiques, adieux détaillés, instructions à la famille.</p>
+        <div class="canvas-holder" data-chart="chart-lengths"><canvas id="chart-lengths"></canvas></div>
+      </div>
     </section>
 
-    <section class="panel">
-      <h2>Répartition par initiale</h2>
-      <div class="bar-chart" id="letter-chart"></div>
+    <section class="panel" id="chronologie">
+      <h2>Chronologie des exécutions</h2>
+      <p class="explain">
+        Les dates d'exécution sont extraites automatiquement des notices biographiques du Maitron
+        (motifs « fusillé le… », « exécuté le… »). Les pics correspondent aux grandes vagues de répression :
+        les otages de l'automne 1941 (Châteaubriant, Nantes, Souge), les condamnations de 1942,
+        puis le pic de février 1944 — le mois de l'exécution du groupe Manouchian, dit « de l'Affiche rouge ».
+      </p>
+      <div class="canvas-holder" data-chart="chart-timeline"><canvas id="chart-timeline"></canvas></div>
     </section>
 
-    <section class="panel">
-      <h2>Lexique</h2>
+    <section class="panel" id="carte">
+      <h2>Géographie des exécutions</h2>
+      <p class="explain">
+        Les lieux d'exécution sont identifiés dans les notices puis géolocalisés : sites connus
+        (Mont-Valérien, Châteaubriant, camp de Souge, citadelle d'Arras…) en coordonnées précises,
+        sinon au centre du département cité. Le rayon est proportionnel au nombre de fusillés du corpus.
+      </p>
+      <div id="map"></div>
+      <p class="hint" id="map-note"></p>
+    </section>
+
+    <section class="panel" id="profils">
+      <h2>Qui étaient-ils ?</h2>
+      <p class="explain">
+        Chaque lettre est reliée à la notice biographique de son auteur. L'âge est calculé à partir
+        des dates de naissance et d'exécution ; l'engagement est détecté par motifs dans la notice
+        (Parti communiste, FTP, CGT, réseaux gaullistes, otages…). Une même personne peut relever de plusieurs catégories.
+      </p>
+      <div class="chart-grid">
+        <div class="chart-box">
+          <h3>Âge au moment de l'exécution</h3>
+          <div class="canvas-holder" data-chart="chart-ages"><canvas id="chart-ages"></canvas></div>
+        </div>
+        <div class="chart-box">
+          <h3>Engagements repérés dans les notices</h3>
+          <div class="canvas-holder" data-chart="chart-groups"><canvas id="chart-groups"></canvas></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="lexique">
+      <h2>Le lexique des lettres</h2>
+      <p class="explain">
+        Les textes sont lemmatisés avec <strong>spaCy</strong> (chaque mot ramené à sa forme de base :
+        « mourrai », « meurs » → <em>mourir</em>) et filtrés des mots-outils. L'étiquetage morphosyntaxique
+        permet d'isoler noms, verbes et adjectifs — trois regards différents sur ce que disent les lettres.
+      </p>
+      <div class="chart-box">
+        <div class="canvas-holder" data-chart="chart-words"><canvas id="chart-words"></canvas></div>
+      </div>
       <div class="tabs">
-        <button class="tab active" data-tab="words">Mots fréquents</button>
-        <button class="tab" data-tab="nouns">Noms</button>
+        <button class="tab active" data-tab="nouns">Noms</button>
         <button class="tab" data-tab="verbs">Verbes</button>
         <button class="tab" data-tab="adjectives">Adjectifs</button>
         <button class="tab" data-tab="phrases">Expressions</button>
       </div>
-      <div class="tab-panel active" id="tab-words"></div>
-      <div class="tab-panel" id="tab-nouns"></div>
-      <div class="tab-panel" id="tab-verbs"></div>
-      <div class="tab-panel" id="tab-adjectives"></div>
-      <div class="tab-panel" id="tab-phrases"></div>
+      <div class="tab-panel active" id="tab-nouns"><div class="canvas-holder" data-chart="chart-nouns"><canvas id="chart-nouns"></canvas></div></div>
+      <div class="tab-panel" id="tab-verbs"><div class="canvas-holder" data-chart="chart-verbs"><canvas id="chart-verbs"></canvas></div></div>
+      <div class="tab-panel" id="tab-adjectives"><div class="canvas-holder" data-chart="chart-adjectives"><canvas id="chart-adjectives"></canvas></div></div>
+      <div class="tab-panel" id="tab-phrases"><div class="canvas-holder" data-chart="chart-phrases"><canvas id="chart-phrases"></canvas></div></div>
     </section>
 
-    <section class="panel">
-      <h2>Entités nommées (spaCy)</h2>
+    <section class="panel" id="entites">
+      <h2>Entités nommées</h2>
+      <p class="explain">
+        La reconnaissance d'entités nommées (NER, modèle <span id="model-name">fr_core_news_lg</span>)
+        repère les lieux, personnes et organisations cités dans les lettres elles-mêmes :
+        les prisons (Fresnes), les prénoms des proches, le Parti, la Gestapo, l'Armée rouge.
+        Les variantes de casse sont fusionnées et les faux positifs filtrés.
+      </p>
       <div class="tabs">
         <button class="tab active" data-etab="locations">Lieux</button>
         <button class="tab" data-etab="persons">Personnes</button>
         <button class="tab" data-etab="organisations">Organisations</button>
       </div>
-      <div class="tab-panel active" id="etab-locations"></div>
-      <div class="tab-panel" id="etab-persons"></div>
-      <div class="tab-panel" id="etab-organisations"></div>
+      <div class="tab-panel active" id="etab-locations"><div class="canvas-holder" data-chart="chart-ent-locations"><canvas id="chart-ent-locations"></canvas></div></div>
+      <div class="tab-panel" id="etab-persons"><div class="canvas-holder" data-chart="chart-ent-persons"><canvas id="chart-ent-persons"></canvas></div></div>
+      <div class="tab-panel" id="etab-organisations"><div class="canvas-holder" data-chart="chart-ent-organisations"><canvas id="chart-ent-organisations"></canvas></div></div>
     </section>
 
-    <section class="panel">
-      <h2>Thèmes latents (LDA)</h2>
-      <div class="clusters" id="topics"></div>
+    <section class="panel" id="references">
+      <h2>Références historiques et spirituelles</h2>
+      <p class="explain">
+        Qui les condamnés invoquent-ils dans leurs dernières heures ? La recherche par motifs
+        mesure la part de lettres mentionnant chaque figure ou symbole. Dieu domine largement ;
+        de Gaulle est presque absent d'un corpus où dominent les fusillés communistes —
+        un résultat qui parle aux historiens de la Résistance.
+      </p>
+      <div class="canvas-holder" data-chart="chart-figures"><canvas id="chart-figures"></canvas></div>
     </section>
 
-    <section class="panel">
-      <h2>Regroupements (K-means, k=2)</h2>
-      <div class="clusters" id="clusters"></div>
+    <section class="panel" id="engagement">
+      <h2>Écrire selon son engagement</h2>
+      <p class="explain">
+        En croisant les notices et les textes, on compare le vocabulaire des fusillés
+        <strong>communistes</strong> à celui des <strong>autres</strong> condamnés
+        (otages non encartés, réseaux gaullistes, catholiques…). Part des lettres de chaque
+        groupe contenant le terme :
+      </p>
+      <div class="canvas-holder" data-chart="chart-comparison"><canvas id="chart-comparison"></canvas></div>
+      <p class="hint" id="comparison-note"></p>
     </section>
 
-    <section class="panel">
+    <section class="panel" id="themes">
+      <h2>Structure latente du corpus</h2>
+      <p class="explain">
+        Deux méthodes non supervisées, sans aucune annotation préalable :
+        <strong>K-means</strong> sur vecteurs TF-IDF partitionne les lettres en deux familles
+        — l'adieu intime (maman, papa, chérie) et l'adieu aux parents teinté de patrie ;
+        <strong>LDA</strong> (allocation de Dirichlet latente) dégage des thèmes qui traversent les textes.
+      </p>
+      <div class="chart-grid">
+        <div class="chart-box">
+          <h3>Regroupement K-means (k = 2)</h3>
+          <div class="canvas-holder" data-chart="chart-clusters"><canvas id="chart-clusters"></canvas></div>
+          <div class="clusters" id="clusters"></div>
+        </div>
+        <div class="chart-box">
+          <h3>Thèmes LDA</h3>
+          <div class="clusters" id="topics"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="concordancier">
       <div class="panel-head">
         <h2>Concordancier</h2>
         <label class="search">
           <span class="sr-only">Mot à rechercher</span>
-          <input type="search" id="kwic-input" placeholder="ex. maman, courage, dieu…" autocomplete="off">
+          <input type="search" id="kwic-input" placeholder="ex. maman, vengeance, prêtre…" autocomplete="off">
         </label>
       </div>
-      <p class="hint">Contexte d'apparition d'un mot dans l'ensemble des lettres.</p>
+      <p class="explain">
+        Outil classique de la linguistique de corpus (KWIC, <em>keyword in context</em>) :
+        chaque occurrence d'un mot est affichée dans son contexte immédiat, avec l'auteur de la lettre.
+        Utile pour vérifier une hypothèse née des statistiques.
+      </p>
       <div id="kwic-results" class="kwic"></div>
     </section>
 
-    <section class="panel">
+    <section class="panel" id="lettres">
       <div class="panel-head">
-        <h2>Corpus</h2>
-        <label class="search">
-          <span class="sr-only">Rechercher</span>
-          <input type="search" id="search" placeholder="Nom, texte…" autocomplete="off">
-        </label>
+        <h2>Les lettres</h2>
+        <div class="filters">
+          <select id="filter-group">
+            <option value="">Tous les engagements</option>
+          </select>
+          <label class="search">
+            <span class="sr-only">Rechercher</span>
+            <input type="search" id="search" placeholder="Nom, texte, lieu…" autocomplete="off">
+          </label>
+        </div>
       </div>
       <p class="hint" id="corpus-hint"></p>
       <div class="table-wrap">
         <table id="corpus-table">
           <thead>
             <tr>
-              <th>Nom</th>
-              <th>Initiale</th>
-              <th>Mots</th>
-              <th>Groupe</th>
-              <th>Lettre</th>
+              <th data-sort="person_name">Nom</th>
+              <th data-sort="age">Âge</th>
+              <th data-sort="exec_date">Exécution</th>
+              <th>Lieu</th>
+              <th>Engagement</th>
+              <th data-sort="word_count">Mots</th>
             </tr>
           </thead>
           <tbody></tbody>
         </table>
+      </div>
+    </section>
+
+    <section class="panel" id="methode">
+      <h2>Méthode et outils</h2>
+      <div class="method-grid">
+        <div>
+          <h3>Acquisition</h3>
+          <p><strong>requests</strong> + <strong>BeautifulSoup</strong> parcourent l'index alphabétique du
+          Maitron et extraient, pour chaque fiche, la notice biographique (<code>div.chapo</code>)
+          et le texte de la lettre (<code>blockquote.poesie</code>). Requêtes espacées d'1,5 s.</p>
+        </div>
+        <div>
+          <h3>Analyse linguistique</h3>
+          <p><strong>spaCy</strong> (modèle <code>fr_core_news_lg</code>) : tokenisation, lemmatisation,
+          étiquetage morphosyntaxique et reconnaissance d'entités nommées. Le grand modèle,
+          entraîné avec des vecteurs de mots, réduit nettement les faux positifs du NER.</p>
+        </div>
+        <div>
+          <h3>Statistique textuelle</h3>
+          <p><strong>scikit-learn</strong> : vectorisation TF-IDF (pondère les mots distinctifs de chaque lettre)
+          pour le K-means ; sacs de mots pour la LDA. Deux approches complémentaires du même corpus,
+          reprises du chapitre 13 du livre.</p>
+        </div>
+        <div>
+          <h3>Croisement biographique</h3>
+          <p>Les notices du Maitron suivent un format quasi régulier — « Né le… à…, fusillé le… à… ; profession ;
+          engagement » — qui se prête à l'extraction par expressions régulières : dates, âges, départements,
+          lieux d'exécution et affiliations.</p>
+        </div>
+      </div>
+      <div class="book-cite">
+        <p>
+          Ce projet est le projet de fin du chapitre 13 de :<br>
+          <strong>Benoît Prieur</strong>, <em><a href="https://www.editions-eni.fr/livre/traitement-automatique-du-langage-naturel-avec-python-le-nlp-avec-spacy-et-nltk-9782409044984"
+          target="_blank" rel="noopener">Traitement automatique du langage naturel avec Python — Le NLP avec spaCy et NLTK</a></em>,
+          Éditions ENI, 2024 (ISBN 978-2-409-04498-4) — rafraîchi et étendu (NER, LDA, croisement biographique, cartographie).
+        </p>
       </div>
     </section>
   </main>
@@ -109,20 +270,28 @@
     </form>
     <h3 id="dialog-name"></h3>
     <p class="dialog-meta" id="dialog-meta"></p>
+    <p class="dialog-bio" id="dialog-bio"></p>
     <pre id="dialog-text"></pre>
-    <p class="dialog-link"><a id="dialog-url" href="#" target="_blank" rel="noopener">Voir la fiche Maitron</a></p>
+    <p class="dialog-link"><a id="dialog-url" href="#" target="_blank" rel="noopener">Consulter la notice complète sur le Maitron</a></p>
   </dialog>
 
   <footer class="site-footer">
     <div class="wrap">
       <p>
-        Source : <a href="https://fusilles-40-44.maitron.fr/yzfusillesdivers/1-lettres-de-fusilles/" target="_blank" rel="noopener">Maitron — Lettres de fusillés</a>.
-        Projet issu du livre <em>Traitement automatique du langage naturel avec Python</em> (Éditions ENI).
+        Source des textes et notices : <a href="https://fusilles-40-44.maitron.fr/yzfusillesdivers/1-lettres-de-fusilles/"
+        target="_blank" rel="noopener">Maitron des fusillés et exécutés 1940-1944</a> (Université Paris 1 / Campus Condorcet).
+        Les lettres appartiennent au Maitron et aux ayants droit ; elles sont reproduites ici à des fins de recherche et d'enseignement.
       </p>
-      <p><a href="https://github.com/thepriben/maitron-40-44-lettres">thepriben/maitron-40-44-lettres</a></p>
+      <p>
+        Issu du livre <em><a href="https://www.editions-eni.fr/livre/traitement-automatique-du-langage-naturel-avec-python-le-nlp-avec-spacy-et-nltk-9782409044984"
+        target="_blank" rel="noopener">Traitement automatique du langage naturel avec Python</a></em> (Éditions ENI) ·
+        Code et données : <a href="https://github.com/thepriben/maitron-40-44-lettres-nlp" target="_blank" rel="noopener">thepriben/maitron-40-44-lettres-nlp</a>
+      </p>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

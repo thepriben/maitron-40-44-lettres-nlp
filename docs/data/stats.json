@@ -1,998 +1,2034 @@
 {
-  "generated_at": "2026-07-12T04:35:53.477233+00:00",
-  "source_url": "https://fusilles-40-44.maitron.fr/yzfusillesdivers/1-lettres-de-fusilles/",
-  "summary": {
-    "total_persons": 326,
-    "with_letter": 299,
-    "without_letter": 27,
-    "total_words": 115255,
-    "avg_words": 385.5,
-    "max_words": 2850
+ "generated_at": "2026-07-12T05:12:23.608647+00:00",
+ "source_url": "https://fusilles-40-44.maitron.fr/yzfusillesdivers/1-lettres-de-fusilles/",
+ "model": "fr_core_news_lg",
+ "summary": {
+  "letters": 299,
+  "total_records": 326,
+  "excluded_records": 27,
+  "total_words": 115255,
+  "avg_words": 385.0,
+  "max_words": 2850,
+  "with_bio": 299,
+  "with_age": 289,
+  "median_age": 25,
+  "located": 252
+ },
+ "timeline": [
+  {
+   "month": "1940-11",
+   "count": 1
   },
-  "by_letter": [
-    {
-      "letter": "A",
-      "total": 17,
-      "with_letter": 17
-    },
-    {
-      "letter": "B",
-      "total": 30,
-      "with_letter": 29
-    },
-    {
-      "letter": "C",
-      "total": 30,
-      "with_letter": 27
-    },
-    {
-      "letter": "D",
-      "total": 30,
-      "with_letter": 28
-    },
-    {
-      "letter": "E",
-      "total": 3,
-      "with_letter": 3
-    },
-    {
-      "letter": "F",
-      "total": 16,
-      "with_letter": 16
-    },
-    {
-      "letter": "G",
-      "total": 30,
-      "with_letter": 30
-    },
-    {
-      "letter": "H",
-      "total": 8,
-      "with_letter": 8
-    },
-    {
-      "letter": "J",
-      "total": 10,
-      "with_letter": 9
-    },
-    {
-      "letter": "K",
-      "total": 2,
-      "with_letter": 2
-    },
-    {
-      "letter": "L",
-      "total": 30,
-      "with_letter": 25
-    },
-    {
-      "letter": "M",
-      "total": 20,
-      "with_letter": 18
-    },
-    {
-      "letter": "N",
-      "total": 2,
-      "with_letter": 2
-    },
-    {
-      "letter": "O",
-      "total": 1,
-      "with_letter": 1
-    },
-    {
-      "letter": "P",
-      "total": 28,
-      "with_letter": 24
-    },
-    {
-      "letter": "Q",
-      "total": 3,
-      "with_letter": 2
-    },
-    {
-      "letter": "R",
-      "total": 18,
-      "with_letter": 17
-    },
-    {
-      "letter": "S",
-      "total": 22,
-      "with_letter": 20
-    },
-    {
-      "letter": "T",
-      "total": 15,
-      "with_letter": 11
-    },
-    {
-      "letter": "V",
-      "total": 7,
-      "with_letter": 6
-    },
-    {
-      "letter": "W",
-      "total": 2,
-      "with_letter": 2
-    },
-    {
-      "letter": "Z",
-      "total": 2,
-      "with_letter": 2
-    }
-  ],
-  "top_words": [
-    {
-      "word": "être",
-      "count": 995
-    },
-    {
-      "word": "cher",
-      "count": 766
-    },
-    {
-      "word": "dernier",
-      "count": 762
-    },
-    {
-      "word": "petit",
-      "count": 686
-    },
-    {
-      "word": "bien",
-      "count": 641
-    },
-    {
-      "word": "lettre",
-      "count": 481
-    },
-    {
-      "word": "adieu",
-      "count": 460
-    },
-    {
-      "word": "mourir",
-      "count": 455
-    },
-    {
-      "word": "faire",
-      "count": 425
-    },
-    {
-      "word": "aimer",
-      "count": 420
-    },
-    {
-      "word": "avoir",
-      "count": 414
-    },
-    {
-      "word": "savoir",
-      "count": 401
-    },
-    {
-      "word": "vie",
-      "count": 388
-    },
-    {
-      "word": "maman",
-      "count": 386
-    },
-    {
-      "word": "chéri",
-      "count": 375
-    },
-    {
-      "word": "bon",
-      "count": 373
-    },
-    {
-      "word": "heure",
-      "count": 363
-    },
-    {
-      "word": "vouloir",
-      "count": 350
-    },
-    {
-      "word": "mort",
-      "count": 336
-    },
-    {
-      "word": "embrasser",
-      "count": 304
-    },
-    {
-      "word": "parent",
-      "count": 283
-    },
-    {
-      "word": "papa",
-      "count": 273
-    },
-    {
-      "word": "voir",
-      "count": 268
-    },
-    {
-      "word": "courage",
-      "count": 257
-    },
-    {
-      "word": "dire",
-      "count": 246
-    },
-    {
-      "word": "venir",
-      "count": 245
-    },
-    {
-      "word": "fois",
-      "count": 237
-    },
-    {
-      "word": "frère",
-      "count": 225
-    },
-    {
-      "word": "écrire",
-      "count": 224
-    },
-    {
-      "word": "france",
-      "count": 216
-    },
-    {
-      "word": "heureux",
-      "count": 216
-    },
-    {
-      "word": "jour",
-      "count": 211
-    },
-    {
-      "word": "falloir",
-      "count": 204
-    },
-    {
-      "word": "pouvoir",
-      "count": 203
-    },
-    {
-      "word": "penser",
-      "count": 202
-    },
-    {
-      "word": "demande",
-      "count": 202
-    },
-    {
-      "word": "famille",
-      "count": 201
-    },
-    {
-      "word": "fils",
-      "count": 199
-    },
-    {
-      "word": "ami",
-      "count": 199
-    },
-    {
-      "word": "grand",
-      "count": 197
-    }
-  ],
-  "top_nouns": [
-    {
-      "word": "lettre",
-      "count": 481
-    },
-    {
-      "word": "vie",
-      "count": 388
-    },
-    {
-      "word": "heure",
-      "count": 363
-    },
-    {
-      "word": "maman",
-      "count": 338
-    },
-    {
-      "word": "mort",
-      "count": 312
-    },
-    {
-      "word": "chéri",
-      "count": 296
-    },
-    {
-      "word": "parent",
-      "count": 283
-    },
-    {
-      "word": "fois",
-      "count": 237
-    },
-    {
-      "word": "frère",
-      "count": 225
-    },
-    {
-      "word": "courage",
-      "count": 224
-    },
-    {
-      "word": "jour",
-      "count": 211
-    },
-    {
-      "word": "famille",
-      "count": 201
-    },
-    {
-      "word": "fils",
-      "count": 199
-    },
-    {
-      "word": "ami",
-      "count": 199
-    },
-    {
-      "word": "enfant",
-      "count": 189
-    },
-    {
-      "word": "papa",
-      "count": 178
-    },
-    {
-      "word": "femme",
-      "count": 163
-    },
-    {
-      "word": "mère",
-      "count": 162
-    },
-    {
-      "word": "camarade",
-      "count": 160
-    },
-    {
-      "word": "cœur",
-      "count": 142
-    }
-  ],
-  "top_verbs": [
-    {
-      "word": "mourir",
-      "count": 452
-    },
-    {
-      "word": "aimer",
-      "count": 408
-    },
-    {
-      "word": "savoir",
-      "count": 383
-    },
-    {
-      "word": "faire",
-      "count": 376
-    },
-    {
-      "word": "vouloir",
-      "count": 349
-    },
-    {
-      "word": "embrasser",
-      "count": 287
-    },
-    {
-      "word": "voir",
-      "count": 264
-    },
-    {
-      "word": "venir",
-      "count": 245
-    },
-    {
-      "word": "dire",
-      "count": 232
-    },
-    {
-      "word": "écrire",
-      "count": 221
-    },
-    {
-      "word": "falloir",
-      "count": 203
-    },
-    {
-      "word": "penser",
-      "count": 200
-    },
-    {
-      "word": "pouvoir",
-      "count": 199
-    },
-    {
-      "word": "avoir",
-      "count": 191
-    },
-    {
-      "word": "demande",
-      "count": 190
-    },
-    {
-      "word": "espérer",
-      "count": 165
-    },
-    {
-      "word": "oublier",
-      "count": 151
-    },
-    {
-      "word": "revoir",
-      "count": 150
-    },
-    {
-      "word": "vivre",
-      "count": 145
-    },
-    {
-      "word": "donner",
-      "count": 137
-    }
-  ],
-  "top_adjectives": [
-    {
-      "word": "dernier",
-      "count": 759
-    },
-    {
-      "word": "cher",
-      "count": 740
-    },
-    {
-      "word": "petit",
-      "count": 683
-    },
-    {
-      "word": "bon",
-      "count": 358
-    },
-    {
-      "word": "heureux",
-      "count": 208
-    },
-    {
-      "word": "grand",
-      "count": 187
-    },
-    {
-      "word": "courageux",
-      "count": 181
-    },
-    {
-      "word": "nouveau",
-      "count": 78
-    },
-    {
-      "word": "fier",
-      "count": 74
-    },
-    {
-      "word": "dur",
-      "count": 74
-    },
-    {
-      "word": "bel",
-      "count": 73
-    },
-    {
-      "word": "jeune",
-      "count": 72
-    },
-    {
-      "word": "meilleur",
-      "count": 71
-    },
-    {
-      "word": "haut",
-      "count": 68
-    },
-    {
-      "word": "vif",
-      "count": 66
-    }
-  ],
-  "top_words_by_doc": [
-    {
-      "word": "dernier",
-      "count": 262
-    },
-    {
-      "word": "être",
-      "count": 248
-    },
-    {
-      "word": "lettre",
-      "count": 244
-    },
-    {
-      "word": "cher",
-      "count": 229
-    },
-    {
-      "word": "bien",
-      "count": 218
-    },
-    {
-      "word": "mourir",
-      "count": 210
-    },
-    {
-      "word": "adieu",
-      "count": 183
-    },
-    {
-      "word": "heure",
-      "count": 179
-    },
-    {
-      "word": "petit",
-      "count": 177
-    },
-    {
-      "word": "faire",
-      "count": 176
-    },
-    {
-      "word": "avoir",
-      "count": 176
-    },
-    {
-      "word": "embrasser",
-      "count": 175
-    },
-    {
-      "word": "aimer",
-      "count": 174
-    },
-    {
-      "word": "savoir",
-      "count": 169
-    },
-    {
-      "word": "mort",
-      "count": 166
-    },
-    {
-      "word": "vie",
-      "count": 162
-    },
-    {
-      "word": "vouloir",
-      "count": 160
-    },
-    {
-      "word": "bon",
-      "count": 152
-    },
-    {
-      "word": "venir",
-      "count": 143
-    },
-    {
-      "word": "maman",
-      "count": 140
-    }
-  ],
-  "entities": {
-    "locations": [
-      {
-        "word": "la France",
-        "count": 109
-      },
-      {
-        "word": "Fresnes",
-        "count": 44
-      },
-      {
-        "word": "Allemands",
-        "count": 24
-      },
-      {
-        "word": "Paris",
-        "count": 21
-      },
-      {
-        "word": "France",
-        "count": 21
-      },
-      {
-        "word": "Lyon",
-        "count": 20
-      },
-      {
-        "word": "Allemagne",
-        "count": 10
-      },
-      {
-        "word": "Seine",
-        "count": 9
-      },
-      {
-        "word": "de France",
-        "count": 8
-      },
-      {
-        "word": "Arras",
-        "count": 8
-      },
-      {
-        "word": "Toulouse",
-        "count": 6
-      },
-      {
-        "word": "Orléans",
-        "count": 6
-      },
-      {
-        "word": "Nantes",
-        "count": 5
-      },
-      {
-        "word": "Ivry-sur-Seine",
-        "count": 5
-      },
-      {
-        "word": "Loos",
-        "count": 5
-      },
-      {
-        "word": "Dijon",
-        "count": 5
-      },
-      {
-        "word": "Châteaubriant",
-        "count": 5
-      },
-      {
-        "word": "Val-de-Marne",
-        "count": 4
-      },
-      {
-        "word": "Rosendaël",
-        "count": 4
-      },
-      {
-        "word": "Amiens",
-        "count": 4
-      },
-      {
-        "word": "Laon",
-        "count": 4
-      },
-      {
-        "word": "Mont-Valérien",
-        "count": 4
-      },
-      {
-        "word": "Saint-Malo",
-        "count": 4
-      },
-      {
-        "word": "Vannes",
-        "count": 4
-      },
-      {
-        "word": "Rhône",
-        "count": 4
-      }
-    ],
-    "persons": [
-      {
-        "word": "Jean",
-        "count": 42
-      },
-      {
-        "word": "René",
-        "count": 32
-      },
-      {
-        "word": "Roger",
-        "count": 30
-      },
-      {
-        "word": "Claude",
-        "count": 29
-      },
-      {
-        "word": "Marie",
-        "count": 22
-      },
-      {
-        "word": "Maurice",
-        "count": 22
-      },
-      {
-        "word": "Henri",
-        "count": 19
-      },
-      {
-        "word": "Jacqueline",
-        "count": 18
-      },
-      {
-        "word": "Paulette",
-        "count": 16
-      },
-      {
-        "word": "Robert",
-        "count": 16
-      },
-      {
-        "word": "Marcel",
-        "count": 16
-      },
-      {
-        "word": "Henriette",
-        "count": 15
-      },
-      {
-        "word": "Louis",
-        "count": 15
-      },
-      {
-        "word": "Suzanne",
-        "count": 15
-      },
-      {
-        "word": "Yvonne",
-        "count": 14
-      },
-      {
-        "word": "Raymond",
-        "count": 13
-      },
-      {
-        "word": "Renée",
-        "count": 12
-      },
-      {
-        "word": "Daniel",
-        "count": 12
-      },
-      {
-        "word": "Pierrot",
-        "count": 12
-      },
-      {
-        "word": "Josette",
-        "count": 12
-      }
-    ],
-    "organisations": [
-      {
-        "word": "Parti",
-        "count": 15
-      },
-      {
-        "word": "Parti Communiste",
-        "count": 7
-      },
-      {
-        "word": "Gestapo",
-        "count": 6
-      },
-      {
-        "word": "Parti communiste",
-        "count": 4
-      },
-      {
-        "word": "URSS",
-        "count": 4
-      },
-      {
-        "word": "Armée Rouge",
-        "count": 2
-      },
-      {
-        "word": "Communiste",
-        "count": 2
-      },
-      {
-        "word": "Humanité et tu me rappelleras",
-        "count": 2
-      },
-      {
-        "word": "Interné Résistant",
-        "count": 2
-      },
-      {
-        "word": "Jeunesses Communistes",
-        "count": 2
-      },
-      {
-        "word": "Jeunes Communistes",
-        "count": 2
-      },
-      {
-        "word": "Remerciez",
-        "count": 2
-      },
-      {
-        "word": "parti Communiste",
-        "count": 2
-      },
-      {
-        "word": "Libération",
-        "count": 2
-      },
-      {
-        "word": "Liberté",
-        "count": 2
-      }
-    ]
+  {
+   "month": "1940-12",
+   "count": 1
   },
-  "phrase_stats": [
-    {
-      "phrase": "courage",
-      "documents": 191,
-      "occurrences": 471,
-      "percentage": 63.9
-    },
-    {
-      "phrase": "adieu",
-      "documents": 185,
-      "occurrences": 468,
-      "percentage": 61.9
-    },
-    {
-      "phrase": "ma chère",
-      "documents": 100,
-      "occurrences": 193,
-      "percentage": 33.4
-    },
-    {
-      "phrase": "je meurs",
-      "documents": 82,
-      "occurrences": 105,
-      "percentage": 27.4
-    },
-    {
-      "phrase": "vive la france",
-      "documents": 77,
-      "occurrences": 94,
-      "percentage": 25.8
-    },
-    {
-      "phrase": "mon petit",
-      "documents": 45,
-      "occurrences": 74,
-      "percentage": 15.1
-    },
-    {
-      "phrase": "petite maman",
-      "documents": 33,
-      "occurrences": 58,
-      "percentage": 11.0
-    },
-    {
-      "phrase": "innocent",
-      "documents": 15,
-      "occurrences": 15,
-      "percentage": 5.0
-    }
+  {
+   "month": "1941-01",
+   "count": 0
+  },
+  {
+   "month": "1941-02",
+   "count": 0
+  },
+  {
+   "month": "1941-03",
+   "count": 0
+  },
+  {
+   "month": "1941-04",
+   "count": 0
+  },
+  {
+   "month": "1941-05",
+   "count": 2
+  },
+  {
+   "month": "1941-06",
+   "count": 0
+  },
+  {
+   "month": "1941-07",
+   "count": 0
+  },
+  {
+   "month": "1941-08",
+   "count": 4
+  },
+  {
+   "month": "1941-09",
+   "count": 4
+  },
+  {
+   "month": "1941-10",
+   "count": 16
+  },
+  {
+   "month": "1941-11",
+   "count": 1
+  },
+  {
+   "month": "1941-12",
+   "count": 8
+  },
+  {
+   "month": "1942-01",
+   "count": 3
+  },
+  {
+   "month": "1942-02",
+   "count": 8
+  },
+  {
+   "month": "1942-03",
+   "count": 10
+  },
+  {
+   "month": "1942-04",
+   "count": 13
+  },
+  {
+   "month": "1942-05",
+   "count": 3
+  },
+  {
+   "month": "1942-06",
+   "count": 1
+  },
+  {
+   "month": "1942-07",
+   "count": 7
+  },
+  {
+   "month": "1942-08",
+   "count": 3
+  },
+  {
+   "month": "1942-09",
+   "count": 6
+  },
+  {
+   "month": "1942-10",
+   "count": 5
+  },
+  {
+   "month": "1942-11",
+   "count": 1
+  },
+  {
+   "month": "1942-12",
+   "count": 1
+  },
+  {
+   "month": "1943-01",
+   "count": 3
+  },
+  {
+   "month": "1943-02",
+   "count": 9
+  },
+  {
+   "month": "1943-03",
+   "count": 3
+  },
+  {
+   "month": "1943-04",
+   "count": 1
+  },
+  {
+   "month": "1943-05",
+   "count": 5
+  },
+  {
+   "month": "1943-06",
+   "count": 3
+  },
+  {
+   "month": "1943-07",
+   "count": 3
+  },
+  {
+   "month": "1943-08",
+   "count": 13
+  },
+  {
+   "month": "1943-09",
+   "count": 17
+  },
+  {
+   "month": "1943-10",
+   "count": 15
+  },
+  {
+   "month": "1943-11",
+   "count": 11
+  },
+  {
+   "month": "1943-12",
+   "count": 6
+  },
+  {
+   "month": "1944-01",
+   "count": 8
+  },
+  {
+   "month": "1944-02",
+   "count": 24
+  },
+  {
+   "month": "1944-03",
+   "count": 14
+  },
+  {
+   "month": "1944-04",
+   "count": 19
+  },
+  {
+   "month": "1944-05",
+   "count": 10
+  },
+  {
+   "month": "1944-06",
+   "count": 16
+  },
+  {
+   "month": "1944-07",
+   "count": 2
+  },
+  {
+   "month": "1944-08",
+   "count": 4
+  },
+  {
+   "month": "1944-09",
+   "count": 1
+  },
+  {
+   "month": "1944-10",
+   "count": 0
+  },
+  {
+   "month": "1944-11",
+   "count": 8
+  }
+ ],
+ "age_bins": [
+  {
+   "label": "14-19",
+   "count": 45
+  },
+  {
+   "label": "20-24",
+   "count": 99
+  },
+  {
+   "label": "25-29",
+   "count": 33
+  },
+  {
+   "label": "30-34",
+   "count": 46
+  },
+  {
+   "label": "35-39",
+   "count": 25
+  },
+  {
+   "label": "40-44",
+   "count": 26
+  },
+  {
+   "label": "45-49",
+   "count": 8
+  },
+  {
+   "label": "50-59",
+   "count": 7
+  },
+  {
+   "label": "60+",
+   "count": 0
+  }
+ ],
+ "length_bins": [
+  {
+   "label": "<100",
+   "count": 33
+  },
+  {
+   "label": "100-199",
+   "count": 60
+  },
+  {
+   "label": "200-299",
+   "count": 58
+  },
+  {
+   "label": "300-449",
+   "count": 62
+  },
+  {
+   "label": "450-599",
+   "count": 39
+  },
+  {
+   "label": "600-799",
+   "count": 23
+  },
+  {
+   "label": "800-999",
+   "count": 11
+  },
+  {
+   "label": "1000-1499",
+   "count": 8
+  },
+  {
+   "label": "1500+",
+   "count": 5
+  }
+ ],
+ "group_counts": [
+  {
+   "group": "communiste",
+   "count": 197
+  },
+  {
+   "group": "FTP",
+   "count": 129
+  },
+  {
+   "group": "otage",
+   "count": 44
+  },
+  {
+   "group": "gaulliste / réseaux",
+   "count": 40
+  },
+  {
+   "group": "syndicaliste",
+   "count": 26
+  },
+  {
+   "group": "catholique",
+   "count": 3
+  }
+ ],
+ "map_places": [
+  {
+   "place": "Mont-Valérien (Suresnes)",
+   "lat": 48.8742,
+   "lon": 2.2159,
+   "count": 95,
+   "names": [
+    "ABALAIN Albert, Corentin, Hervé",
+    "ALEZARD Jean, Léon [ALÉZARD] [Pseudonymes : Gil André, Lescaut, Lemoine, Bassecourt]",
+    "ALFONSO Celestino",
+    "ALIÉMART Gilbert, Timothée [dit Roussel]",
+    "ANQUETIL Bernard, Jules, Eugène alias Lhermite",
+    "ARGOUACH Lucien, Étienne, [ARGOUAC'H]",
+    "AUBOUET André, Maurice",
+    "AUPÉE Marcel, Jean",
+    "BAJTSZTOK Chuna, Henri [dit Gilbert]",
+    "BALBIN Szmul (Samuel)"
+   ]
+  },
+  {
+   "place": "La Doua (Villeurbanne)",
+   "lat": 45.783,
+   "lon": 4.872,
+   "count": 14,
+   "names": [
+    "BERNARD Clovis, Georges",
+    "BIOU Pierre, Charles",
+    "CHARMOILLE Pierre, Joseph, Constant",
+    "DESCHAMPS Claudius, Benoît",
+    "GARNIER René, Louis, Gaston",
+    "GENEVOIS Georges, Pierre",
+    "KORZEC Maurice [dit Henri MARCELLIN]",
+    "LAGARDÈRE Francis, Jean, Paul",
+    "MAUTRET Jacques, Henri",
+    "PONCHON Paul, Roger, Albert"
+   ]
+  },
+  {
+   "place": "Camp de Souge (Martignas-sur-Jalle)",
+   "lat": 44.839,
+   "lon": -0.786,
+   "count": 11,
+   "names": [
+    "ABARRATEGUI François, Benoît. Écrit parfois par erreur ABARRETEGUY François",
+    "ARGILLOS Gérard, Jean",
+    "AUBOURG Jean, François dit Marcel",
+    "BARBRY Roger, Désiré",
+    "BOURGOIS Maurice, Lucien [pseudonyme Denis Diot, Jean, PetitJean]",
+    "CAZALAS Pierre [CAZALAS Gabriel, <em>Pierre</em>]",
+    "DESREUMAUX Paul, Albert, Émile",
+    "FLEURAUX Gabriel, Fernand",
+    "ROBERT André",
+    "SANSON Franc, Jean"
+   ]
+  },
+  {
+   "place": "Châteaubriant (carrière de la Sablière)",
+   "lat": 47.716,
+   "lon": -1.3746,
+   "count": 10,
+   "names": [
+    "BAROUX Paul, Jean, Victor",
+    "DAVID Émile, Léopold",
+    "DELAVAQUERIE Charles, Gabriel",
+    "GRANDEL Jean [GRANDEL Joseph, <em>Jean</em>, Angèle]",
+    "GRANET Désiré",
+    "LAFORGE Raymond",
+    "PILLET Maurice [PILLET Pierre, <em>Maurice</em>]",
+    "POULMARCH (ou POULMARC'H) Jean, Marie",
+    "TÉNINE Maurice [TÉNINE Moïshé, Eidel, dit]",
+    "TIMBAUD Jean-Pierre [TIMBAUD Pierre, Jean, Baptiste dit <em>Jean-Pierre</em>]"
+   ]
+  },
+  {
+   "place": "Citadelle d'Arras",
+   "lat": 50.284,
+   "lon": 2.762,
+   "count": 9,
+   "names": [
+    "CAMPHIN Paul, Jules",
+    "CARO Jean",
+    "DELATTRE Alfred",
+    "DELOBEL Joseph",
+    "DELVAL Roland",
+    "DUPONT Ernest, Augustin",
+    "HAPIOT Julien",
+    "LEDENT Marcel",
+    "MICHEL Émile, Clément"
+   ]
+  },
+  {
+   "place": "Munich (Allemagne)",
+   "lat": 48.137,
+   "lon": 11.575,
+   "count": 7,
+   "names": [
+    "DÉFONTAINE Louis, Jean, Baptiste, Frédéric",
+    "DUMONT Eugène, Léonce",
+    "GRODECŒUR René, Charles, Jules",
+    "JAMBART Jules, Louis, Joseph",
+    "JAVELOT Léon",
+    "SENEUZE Pierre, Raymond",
+    "VAZÉ René"
+   ]
+  },
+  {
+   "place": "citadelle de Besançon",
+   "lat": 47.15,
+   "lon": 6.35,
+   "count": 6,
+   "names": [
+    "AYMONNIN Raymond, René, Eugène",
+    "GRAPPIN Jean-Paul",
+    "PAQUERIAUD Paul, François, alias Pierre",
+    "PUGET  Marcellin [Léon, Marcellin]",
+    "PUGET Roger, Marcel",
+    "ROTHAMER Georges, Gérard"
+   ]
+  },
+  {
+   "place": "Nantes",
+   "lat": 47.35,
+   "lon": -1.7,
+   "count": 5,
+   "names": [
+    "BOISSARD Marcel, Ollivier",
+    "COLAS Joseph, Léon, Pierre",
+    "DOUVILLEZ Robert, Julien, Albert",
+    "FOURNY Alexandre, Louis, Marie, Joseph",
+    "LACAZETTE Maurice [LACAZETTE Camille dit <em>Maurice</em>]"
+   ]
+  },
+  {
+   "place": "Vannes",
+   "lat": 47.85,
+   "lon": -2.8,
+   "count": 5,
+   "names": [
+    "CONAN Henri, Armand, Marie",
+    "JARNO Joseph, Louis, Marie",
+    "LANQUETIL François, René",
+    "LARBOULETTE Louis [Stanislas, <i>Louis</i>, Marie, Dieudoné",
+    "PÉDRONO René, Marie"
+   ]
+  },
+  {
+   "place": "fort des Ayvelles",
+   "lat": 49.6,
+   "lon": 4.65,
+   "count": 4,
+   "names": [
+    "ARNOULD René, Alexandre",
+    "BOILLOT Georges",
+    "MAISONNEUVE Lucien, Emmanuel, Louis, Marie",
+    "STADLER Robert, Henri"
+   ]
+  },
+  {
+   "place": "Toulouse",
+   "lat": 43.35,
+   "lon": 1.2,
+   "count": 4,
+   "names": [
+    "BLANCHETON Jean, Roger",
+    "BOIZARD Charles",
+    "LANGER Marcel [LANGER Mendel, dit]",
+    "MATHOU Paul, Jacques, François, Henri"
+   ]
+  },
+  {
+   "place": "Stand de tir de Balard (Paris)",
+   "lat": 48.833,
+   "lon": 2.278,
+   "count": 3,
+   "names": [
+    "BECK Robert, Louis [Pseudonyme : Raoul]",
+    "BENOIT Pierre [dit Maxime]",
+    "THOUËMENT René, Jean, Marie"
+   ]
+  },
+  {
+   "place": "Fort de Bondues",
+   "lat": 50.701,
+   "lon": 3.094,
+   "count": 3,
+   "names": [
+    "BONPAIN René, Marie, Joseph [dit l'abbé Bonpain]",
+    "FOLLET Marcel, Émile, Georges",
+    "ROUVILLOIS Jean-Baptiste (ou Jean, Baptiste), Édouard"
+   ]
+  },
+  {
+   "place": "Lyon",
+   "lat": 45.85,
+   "lon": 4.65,
+   "count": 3,
+   "names": [
+    "CHARDARD Jean, Charles, Louis, Marie",
+    "D'ALESSANDRI Albéric",
+    "SCHUWER Jean, Charles, Henri [Pseudonyme dans la Résistance : Robin]"
+   ]
+  },
+  {
+   "place": "Saint-Jacques-de-la-Lande",
+   "lat": 48.15,
+   "lon": -1.65,
+   "count": 3,
+   "names": [
+    "CHÉREL Louis, Joseph, Jean",
+    "GÉRARD Albert, Alexandre, Marie",
+    "HERVY Paul, René"
+   ]
+  },
+  {
+   "place": "Laon",
+   "lat": 49.55,
+   "lon": 3.55,
+   "count": 3,
+   "names": [
+    "DAURIOL André, Jules",
+    "PINOT Gaston, Henri",
+    "ROUSSEL Léon, Ernest"
+   ]
+  },
+  {
+   "place": "Saint-Quentin",
+   "lat": 49.55,
+   "lon": 3.55,
+   "count": 3,
+   "names": [
+    "DESJARDIN Edmond, Hubert",
+    "DESJARDIN Lucien, Edmond, Simon",
+    "RÉGHEM Albert, Auguste"
+   ]
+  },
+  {
+   "place": "terrain militaire du Bêle à Nantes",
+   "lat": 47.35,
+   "lon": -1.7,
+   "count": 3,
+   "names": [
+    "GRELEAU Pierre, Louis, Marcel",
+    "PLATIAU Jean, Émile",
+    "ROUAULT André, Pierre"
+   ]
+  },
+  {
+   "place": "Biard",
+   "lat": 46.55,
+   "lon": 0.45,
+   "count": 2,
+   "names": [
+    "BANDLÉ Louis, Albert",
+    "GRINBAUM Bernard"
+   ]
+  },
+  {
+   "place": "champ de tir de Challuy-Nevers",
+   "lat": 47.1,
+   "lon": 3.5,
+   "count": 2,
+   "names": [
+    "BAR Francis, Paul, Clément",
+    "RIQUIER Marc"
+   ]
+  },
+  {
+   "place": "Amiens",
+   "lat": 49.95,
+   "lon": 2.3,
+   "count": 2,
+   "names": [
+    "BLOT Gaston, Philogène, Désiré",
+    "DIZY Alfred, Gabriel"
+   ]
+  },
+  {
+   "place": "Tulle",
+   "lat": 45.35,
+   "lon": 1.9,
+   "count": 2,
+   "names": [
+    "BONNET Georges",
+    "GODILLON Charles"
+   ]
+  },
+  {
+   "place": "dunes de La Torche en Plomeur",
+   "lat": 48.25,
+   "lon": -4.05,
+   "count": 2,
+   "names": [
+    "CARIOU Étienne",
+    "FAOU Julien, Marie"
+   ]
+  },
+  {
+   "place": "Besançon",
+   "lat": 47.15,
+   "lon": 6.35,
+   "count": 2,
+   "names": [
+    "FERTET Henri, Claude",
+    "PAILLARD René, Léon, Jean"
+   ]
+  },
+  {
+   "place": "Vallée-aux-Loups à Châtenay-Malabry",
+   "lat": 48.85,
+   "lon": 2.35,
+   "count": 2,
+   "names": [
+    "GAUTHEROT Henri, Auguste",
+    "TYSZELMAN Samuel (Szmul), Cecel"
+   ]
+  },
+  {
+   "place": "Amiens  suite à une condamnation à mort",
+   "lat": 49.95,
+   "lon": 2.3,
+   "count": 2,
+   "names": [
+    "MASSON Émile, Valentin, Joseph",
+    "ROBBE Maurice [ROBBE Georges, <em>Maurice</em>.  Pseudonyme: Raymond, André"
+   ]
+  },
+  {
+   "place": "champ de tir d’Égriselles",
+   "lat": 47.85,
+   "lon": 3.65,
+   "count": 1,
+   "names": [
+    "AILLOT Claude"
+   ]
+  },
+  {
+   "place": "Gouesnach",
+   "lat": 48.25,
+   "lon": -4.05,
+   "count": 1,
+   "names": [
+    "AUFFRET Jean, Henri"
+   ]
+  },
+  {
+   "place": "camp d’Auvours-Le Mans",
+   "lat": 48.0,
+   "lon": 0.2,
+   "count": 1,
+   "names": [
+    "AUVINET Alex [AUVINET Alexis, dit]. Pseudonymes : LEGALL, LE FUR, Arthur"
+   ]
+  },
+  {
+   "place": "Stuttgart (Allemagne)",
+   "lat": 48.776,
+   "lon": 9.183,
+   "count": 1,
+   "names": [
+    "BANCIC Olga [BANCIC Golda, dite Pierrette]"
+   ]
+  },
+  {
+   "place": "Épinal",
+   "lat": 48.2,
+   "lon": 6.4,
+   "count": 1,
+   "names": [
+    "BARBIER René, Albert, Marcel"
+   ]
+  },
+  {
+   "place": "Épine",
+   "lat": 48.95,
+   "lon": 4.3,
+   "count": 1,
+   "names": [
+    "BONNOT Lucien, René [Pseudonyme dans la Résistance : René]"
+   ]
+  },
+  {
+   "place": "Cuincy",
+   "lat": 50.45,
+   "lon": 3.2,
+   "count": 1,
+   "names": [
+    "CARON Louis, Victor"
+   ]
+  },
+  {
+   "place": "Saint-Quentin  après condamnation à mort",
+   "lat": 49.55,
+   "lon": 3.55,
+   "count": 1,
+   "names": [
+    "CHARPENTIER Henri"
+   ]
+  },
+  {
+   "place": "Saint-Jean-de-la-Ruelle",
+   "lat": 47.9,
+   "lon": 2.35,
+   "count": 1,
+   "names": [
+    "CHEVRIN Louis, Ernest"
+   ]
+  },
+  {
+   "place": "citadelle de  Besançon",
+   "lat": 47.15,
+   "lon": 6.35,
+   "count": 1,
+   "names": [
+    "COMPAGNON Jean, Auguste"
+   ]
+  },
+  {
+   "place": "Saint-Nazaire",
+   "lat": 47.35,
+   "lon": -1.7,
+   "count": 1,
+   "names": [
+    "DE NEYMAN Jean, Casimir"
+   ]
+  },
+  {
+   "place": "Saint-Roch",
+   "lat": 47.25,
+   "lon": 0.7,
+   "count": 1,
+   "names": [
+    "DEROUET Paul, Henri"
+   ]
+  },
+  {
+   "place": "Pointe de Mousterlin",
+   "lat": 48.25,
+   "lon": -4.05,
+   "count": 1,
+   "names": [
+    "DUBOIS Maxime, Louis, Paul"
+   ]
+  },
+  {
+   "place": "camp d’Auvours",
+   "lat": 48.0,
+   "lon": 0.2,
+   "count": 1,
+   "names": [
+    "ESTIVALS Robert, Lucien, écrit aussi ESTIVAL Pseudonymes : ANDRÉ, LOUIS"
+   ]
+  },
+  {
+   "place": "Nevers",
+   "lat": 47.1,
+   "lon": 3.5,
+   "count": 1,
+   "names": [
+    "FOUCHÈRE Louis, Jacques"
+   ]
+  },
+  {
+   "place": "champ de tir de Biard près de Poitiers",
+   "lat": 46.55,
+   "lon": 0.45,
+   "count": 1,
+   "names": [
+    "FRANÇOIS René"
+   ]
+  },
+  {
+   "place": "Yonne",
+   "lat": 47.85,
+   "lon": 3.65,
+   "count": 1,
+   "names": [
+    "GIRARD Serge"
+   ]
+  },
+  {
+   "place": "Doubs",
+   "lat": 47.15,
+   "lon": 6.35,
+   "count": 1,
+   "names": [
+    "GLASSON Roger"
+   ]
+  },
+  {
+   "place": "camp du Bête à Nantes",
+   "lat": 47.35,
+   "lon": -1.7,
+   "count": 1,
+   "names": [
+    "GROCHOCKI Zygmut ou Siegmond"
+   ]
+  },
+  {
+   "place": "champ de tir du Bêle à Nantes",
+   "lat": 47.35,
+   "lon": -1.7,
+   "count": 1,
+   "names": [
+    "GROLLEAU Jean, Louis, Narcisse, Georges"
+   ]
+  },
+  {
+   "place": "pointe de Mousterlin",
+   "lat": 48.25,
+   "lon": -4.05,
+   "count": 1,
+   "names": [
+    "GUÉGUEN Roger, Pierre, Jacques"
+   ]
+  },
+  {
+   "place": "stand de tir du Madrillet",
+   "lat": 49.65,
+   "lon": 1.0,
+   "count": 1,
+   "names": [
+    "GUÉNOT Raymond, Alexandre, Louis"
+   ]
+  },
+  {
+   "place": "citadelle de Lille",
+   "lat": 50.45,
+   "lon": 3.2,
+   "count": 1,
+   "names": [
+    "JOLY Félicien"
+   ]
+  },
+  {
+   "place": "Clermont-Ferrand  après condamnation",
+   "lat": 45.7,
+   "lon": 3.15,
+   "count": 1,
+   "names": [
+    "JUGE Marc-Roland"
+   ]
+  },
+  {
+   "place": "terrain du Bêle à Nantes",
+   "lat": 47.35,
+   "lon": -1.7,
+   "count": 1,
+   "names": [
+    "LAGATHU Maurice"
+   ]
+  },
+  {
+   "place": "Moulin-sous-Touvent",
+   "lat": 49.4,
+   "lon": 2.4,
+   "count": 1,
+   "names": [
+    "LEFEBVRE Arthur"
+   ]
+  },
+  {
+   "place": "Bourges",
+   "lat": 47.05,
+   "lon": 2.5,
+   "count": 1,
+   "names": [
+    "LEGEAY Robert, Henri, Noël"
+   ]
+  },
+  {
+   "place": "Saint-Lô",
+   "lat": 49.08,
+   "lon": -1.3,
+   "count": 1,
+   "names": [
+    "LEMAIRE Maurice, Joseph"
+   ]
+  },
+  {
+   "place": "camp d’Auvours à Champagné",
+   "lat": 48.0,
+   "lon": 0.2,
+   "count": 1,
+   "names": [
+    "LESVEN Jules, François, Marie. Pseudonymes : JEAN, GUILLOU Jean"
+   ]
+  },
+  {
+   "place": "Frotey-lès Vesoul",
+   "lat": 47.65,
+   "lon": 6.1,
+   "count": 1,
+   "names": [
+    "MAÎTRE Bernard, Georges"
+   ]
+  },
+  {
+   "place": "fort du Vert-Galant à Wambrechies",
+   "lat": 50.45,
+   "lon": 3.2,
+   "count": 1,
+   "names": [
+    "MARTEL Aimable, Henri. Dit souvent MARTEL Henri"
+   ]
+  },
+  {
+   "place": "Sévrier  par les Groupes mobiles de réserve",
+   "lat": 46.05,
+   "lon": 6.4,
+   "count": 1,
+   "names": [
+    "MOËNNE Jean, Fernand"
+   ]
+  },
+  {
+   "place": "Frotey-lès-Vesoul  suite à une condamnation à mort",
+   "lat": 47.65,
+   "lon": 6.1,
+   "count": 1,
+   "names": [
+    "MONGIN Jules, Edmond"
+   ]
+  },
+  {
+   "place": "Vallée-aux-Loups",
+   "lat": 48.85,
+   "lon": 2.35,
+   "count": 1,
+   "names": [
+    "PELLETIER Louis, Robert"
+   ]
+  },
+  {
+   "place": "Millau",
+   "lat": 44.3,
+   "lon": 2.65,
+   "count": 1,
+   "names": [
+    "PERRUTEL Marceau [alias DURAND dans la Résistance]"
+   ]
+  },
+  {
+   "place": "Villeurbanne",
+   "lat": 45.85,
+   "lon": 4.65,
+   "count": 1,
+   "names": [
+    "POPOUNEAU Maurice, Henri"
+   ]
+  },
+  {
+   "place": "Nîmes",
+   "lat": 43.95,
+   "lon": 4.2,
+   "count": 1,
+   "names": [
+    "ROBERT Jean, Auguste"
+   ]
+  },
+  {
+   "place": "Caen",
+   "lat": 49.1,
+   "lon": -0.35,
+   "count": 1,
+   "names": [
+    "SAMPAIX Lucien"
+   ]
+  },
+  {
+   "place": "Annecy  par les GMR groupes mobiles de réserve",
+   "lat": 46.05,
+   "lon": 6.4,
+   "count": 1,
+   "names": [
+    "SCHMIDT Hugo"
+   ]
+  },
+  {
+   "place": "citadelle d’Amiens  suite à une condamnation à mort",
+   "lat": 49.95,
+   "lon": 2.3,
+   "count": 1,
+   "names": [
+    "SEIGNEURGENS Maurice"
+   ]
+  },
+  {
+   "place": "prison d’Évreux",
+   "lat": 49.1,
+   "lon": 1.0,
+   "count": 1,
+   "names": [
+    "SEMARD Pierre, Victor"
+   ]
+  },
+  {
+   "place": "Angers",
+   "lat": 47.4,
+   "lon": -0.55,
+   "count": 1,
+   "names": [
+    "TIGEOT Adrien. Pseudonyme dans la Résistance : Didi"
+   ]
+  },
+  {
+   "place": "Lille",
+   "lat": 50.45,
+   "lon": 3.2,
+   "count": 1,
+   "names": [
+    "TURBANT Fernand, Alfred"
+   ]
+  },
+  {
+   "place": "Barre-de-Semilly",
+   "lat": 49.08,
+   "lon": -1.3,
+   "count": 1,
+   "names": [
+    "TURMEAU Jean, Georges  [Pseudonyme dans la Résistance : Alfred Ottino]"
+   ]
+  },
+  {
+   "place": "Corcieux",
+   "lat": 48.2,
+   "lon": 6.4,
+   "count": 1,
+   "names": [
+    "VICHARD René, Jean, Baptiste"
+   ]
+  }
+ ],
+ "top_words": [
+  {
+   "word": "être",
+   "count": 995
+  },
+  {
+   "word": "cher",
+   "count": 766
+  },
+  {
+   "word": "dernier",
+   "count": 762
+  },
+  {
+   "word": "petit",
+   "count": 686
+  },
+  {
+   "word": "bien",
+   "count": 641
+  },
+  {
+   "word": "lettre",
+   "count": 481
+  },
+  {
+   "word": "adieu",
+   "count": 460
+  },
+  {
+   "word": "mourir",
+   "count": 455
+  },
+  {
+   "word": "faire",
+   "count": 425
+  },
+  {
+   "word": "aimer",
+   "count": 420
+  },
+  {
+   "word": "avoir",
+   "count": 414
+  },
+  {
+   "word": "savoir",
+   "count": 401
+  },
+  {
+   "word": "vie",
+   "count": 388
+  },
+  {
+   "word": "maman",
+   "count": 386
+  },
+  {
+   "word": "chéri",
+   "count": 375
+  },
+  {
+   "word": "bon",
+   "count": 373
+  },
+  {
+   "word": "heure",
+   "count": 363
+  },
+  {
+   "word": "vouloir",
+   "count": 350
+  },
+  {
+   "word": "mort",
+   "count": 336
+  },
+  {
+   "word": "embrasser",
+   "count": 304
+  },
+  {
+   "word": "parent",
+   "count": 283
+  },
+  {
+   "word": "papa",
+   "count": 273
+  },
+  {
+   "word": "voir",
+   "count": 268
+  },
+  {
+   "word": "courage",
+   "count": 257
+  },
+  {
+   "word": "dire",
+   "count": 246
+  },
+  {
+   "word": "venir",
+   "count": 245
+  },
+  {
+   "word": "fois",
+   "count": 237
+  },
+  {
+   "word": "frère",
+   "count": 225
+  },
+  {
+   "word": "écrire",
+   "count": 224
+  },
+  {
+   "word": "france",
+   "count": 216
+  },
+  {
+   "word": "heureux",
+   "count": 216
+  },
+  {
+   "word": "jour",
+   "count": 211
+  },
+  {
+   "word": "falloir",
+   "count": 204
+  },
+  {
+   "word": "pouvoir",
+   "count": 203
+  },
+  {
+   "word": "penser",
+   "count": 202
+  },
+  {
+   "word": "demande",
+   "count": 202
+  },
+  {
+   "word": "famille",
+   "count": 201
+  },
+  {
+   "word": "fils",
+   "count": 199
+  },
+  {
+   "word": "ami",
+   "count": 199
+  },
+  {
+   "word": "grand",
+   "count": 197
+  }
+ ],
+ "top_nouns": [
+  {
+   "word": "lettre",
+   "count": 481
+  },
+  {
+   "word": "vie",
+   "count": 388
+  },
+  {
+   "word": "heure",
+   "count": 363
+  },
+  {
+   "word": "maman",
+   "count": 338
+  },
+  {
+   "word": "mort",
+   "count": 312
+  },
+  {
+   "word": "chéri",
+   "count": 296
+  },
+  {
+   "word": "parent",
+   "count": 283
+  },
+  {
+   "word": "fois",
+   "count": 237
+  },
+  {
+   "word": "frère",
+   "count": 225
+  },
+  {
+   "word": "courage",
+   "count": 224
+  },
+  {
+   "word": "jour",
+   "count": 211
+  },
+  {
+   "word": "famille",
+   "count": 201
+  },
+  {
+   "word": "fils",
+   "count": 199
+  },
+  {
+   "word": "ami",
+   "count": 199
+  },
+  {
+   "word": "enfant",
+   "count": 189
+  },
+  {
+   "word": "papa",
+   "count": 178
+  },
+  {
+   "word": "femme",
+   "count": 163
+  },
+  {
+   "word": "mère",
+   "count": 162
+  },
+  {
+   "word": "camarade",
+   "count": 160
+  },
+  {
+   "word": "cœur",
+   "count": 142
+  }
+ ],
+ "top_verbs": [
+  {
+   "word": "mourir",
+   "count": 452
+  },
+  {
+   "word": "aimer",
+   "count": 408
+  },
+  {
+   "word": "savoir",
+   "count": 383
+  },
+  {
+   "word": "faire",
+   "count": 376
+  },
+  {
+   "word": "vouloir",
+   "count": 349
+  },
+  {
+   "word": "embrasser",
+   "count": 287
+  },
+  {
+   "word": "voir",
+   "count": 264
+  },
+  {
+   "word": "venir",
+   "count": 245
+  },
+  {
+   "word": "dire",
+   "count": 232
+  },
+  {
+   "word": "écrire",
+   "count": 221
+  },
+  {
+   "word": "falloir",
+   "count": 203
+  },
+  {
+   "word": "penser",
+   "count": 200
+  },
+  {
+   "word": "pouvoir",
+   "count": 199
+  },
+  {
+   "word": "avoir",
+   "count": 191
+  },
+  {
+   "word": "demande",
+   "count": 190
+  },
+  {
+   "word": "espérer",
+   "count": 165
+  },
+  {
+   "word": "oublier",
+   "count": 151
+  },
+  {
+   "word": "revoir",
+   "count": 150
+  },
+  {
+   "word": "vivre",
+   "count": 145
+  },
+  {
+   "word": "donner",
+   "count": 137
+  }
+ ],
+ "top_adjectives": [
+  {
+   "word": "dernier",
+   "count": 759
+  },
+  {
+   "word": "cher",
+   "count": 740
+  },
+  {
+   "word": "petit",
+   "count": 683
+  },
+  {
+   "word": "bon",
+   "count": 358
+  },
+  {
+   "word": "heureux",
+   "count": 208
+  },
+  {
+   "word": "grand",
+   "count": 187
+  },
+  {
+   "word": "courageux",
+   "count": 181
+  },
+  {
+   "word": "nouveau",
+   "count": 78
+  },
+  {
+   "word": "fier",
+   "count": 74
+  },
+  {
+   "word": "dur",
+   "count": 74
+  },
+  {
+   "word": "bel",
+   "count": 73
+  },
+  {
+   "word": "jeune",
+   "count": 72
+  },
+  {
+   "word": "meilleur",
+   "count": 71
+  },
+  {
+   "word": "haut",
+   "count": 68
+  },
+  {
+   "word": "vif",
+   "count": 66
+  }
+ ],
+ "top_words_by_doc": [
+  {
+   "word": "dernier",
+   "count": 262
+  },
+  {
+   "word": "être",
+   "count": 248
+  },
+  {
+   "word": "lettre",
+   "count": 244
+  },
+  {
+   "word": "cher",
+   "count": 229
+  },
+  {
+   "word": "bien",
+   "count": 218
+  },
+  {
+   "word": "mourir",
+   "count": 210
+  },
+  {
+   "word": "adieu",
+   "count": 183
+  },
+  {
+   "word": "heure",
+   "count": 179
+  },
+  {
+   "word": "petit",
+   "count": 177
+  },
+  {
+   "word": "faire",
+   "count": 176
+  },
+  {
+   "word": "avoir",
+   "count": 176
+  },
+  {
+   "word": "embrasser",
+   "count": 175
+  },
+  {
+   "word": "aimer",
+   "count": 174
+  },
+  {
+   "word": "savoir",
+   "count": 169
+  },
+  {
+   "word": "mort",
+   "count": 166
+  },
+  {
+   "word": "vie",
+   "count": 162
+  },
+  {
+   "word": "vouloir",
+   "count": 160
+  },
+  {
+   "word": "bon",
+   "count": 152
+  },
+  {
+   "word": "venir",
+   "count": 143
+  },
+  {
+   "word": "maman",
+   "count": 140
+  }
+ ],
+ "entities": {
+  "locations": [
+   {
+    "word": "France",
+    "count": 139
+   },
+   {
+    "word": "Fresnes",
+    "count": 44
+   },
+   {
+    "word": "Paris",
+    "count": 21
+   },
+   {
+    "word": "Lyon",
+    "count": 20
+   },
+   {
+    "word": "Allemagne",
+    "count": 10
+   },
+   {
+    "word": "Seine",
+    "count": 9
+   },
+   {
+    "word": "Arras",
+    "count": 8
+   },
+   {
+    "word": "Toulouse",
+    "count": 6
+   },
+   {
+    "word": "Orléans",
+    "count": 6
+   },
+   {
+    "word": "Nantes",
+    "count": 5
+   },
+   {
+    "word": "Ivry-sur-Seine",
+    "count": 5
+   },
+   {
+    "word": "Loos",
+    "count": 5
+   },
+   {
+    "word": "Dijon",
+    "count": 5
+   },
+   {
+    "word": "Châteaubriant",
+    "count": 5
+   },
+   {
+    "word": "Mans",
+    "count": 4
+   },
+   {
+    "word": "Val-de-Marne",
+    "count": 4
+   },
+   {
+    "word": "Rosendaël",
+    "count": 4
+   },
+   {
+    "word": "Amiens",
+    "count": 4
+   },
+   {
+    "word": "Laon",
+    "count": 4
+   },
+   {
+    "word": "prison de Fresnes",
+    "count": 4
+   },
+   {
+    "word": "Mont-Valérien",
+    "count": 4
+   },
+   {
+    "word": "Saint-Malo",
+    "count": 4
+   },
+   {
+    "word": "Vannes",
+    "count": 4
+   },
+   {
+    "word": "Rhône",
+    "count": 4
+   },
+   {
+    "word": "Boussières",
+    "count": 4
+   }
   ],
-  "clusters": [
-    {
-      "id": 0,
-      "size": 122,
-      "keywords": [
-        "maman",
-        "papa",
-        "bien",
-        "petite",
-        "chérie",
-        "adieu",
-        "chère",
-        "vie",
-        "petit",
-        "dernière",
-        "été",
-        "dieu",
-        "embrasse",
-        "courage",
-        "faire"
-      ]
-    },
-    {
-      "id": 1,
-      "size": 177,
-      "keywords": [
-        "bien",
-        "dernière",
-        "lettre",
-        "adieu",
-        "parents",
-        "chers",
-        "mort",
-        "france",
-        "vie",
-        "chère",
-        "été",
-        "mère",
-        "mourir",
-        "fils",
-        "heures"
-      ]
-    }
+  "persons": [
+   {
+    "word": "Jean",
+    "count": 42
+   },
+   {
+    "word": "René",
+    "count": 32
+   },
+   {
+    "word": "Roger",
+    "count": 30
+   },
+   {
+    "word": "Claude",
+    "count": 29
+   },
+   {
+    "word": "Marie",
+    "count": 22
+   },
+   {
+    "word": "Maurice",
+    "count": 22
+   },
+   {
+    "word": "Henri",
+    "count": 19
+   },
+   {
+    "word": "Jacqueline",
+    "count": 18
+   },
+   {
+    "word": "Paulette",
+    "count": 16
+   },
+   {
+    "word": "Robert",
+    "count": 16
+   },
+   {
+    "word": "Marcel",
+    "count": 16
+   },
+   {
+    "word": "Henriette",
+    "count": 15
+   },
+   {
+    "word": "Louis",
+    "count": 15
+   },
+   {
+    "word": "Suzanne",
+    "count": 15
+   },
+   {
+    "word": "Yvonne",
+    "count": 14
+   },
+   {
+    "word": "Raymond",
+    "count": 13
+   },
+   {
+    "word": "Renée",
+    "count": 12
+   },
+   {
+    "word": "Daniel",
+    "count": 12
+   },
+   {
+    "word": "Pierrot",
+    "count": 12
+   },
+   {
+    "word": "Josette",
+    "count": 12
+   }
   ],
-  "topics": [
-    {
-      "id": 0,
-      "keywords": [
-        "dernière",
-        "adieu",
-        "lettre",
-        "bien",
-        "mère",
-        "enfants",
-        "chère",
-        "sais",
-        "vie",
-        "père"
-      ]
-    },
-    {
-      "id": 1,
-      "keywords": [
-        "bien",
-        "heures",
-        "été",
-        "colis",
-        "voir",
-        "camarades",
-        "jours",
-        "fus",
-        "temps",
-        "vie"
-      ]
-    },
-    {
-      "id": 2,
-      "keywords": [
-        "bien",
-        "vie",
-        "mort",
-        "lettre",
-        "dernière",
-        "france",
-        "adieu",
-        "faire",
-        "chers",
-        "parents"
-      ]
-    },
-    {
-      "id": 3,
-      "keywords": [
-        "bien",
-        "maman",
-        "dernière",
-        "adieu",
-        "petite",
-        "chère",
-        "lettre",
-        "été",
-        "parents",
-        "papa"
-      ]
-    }
+  "organisations": [
+   {
+    "word": "Parti",
+    "count": 15
+   },
+   {
+    "word": "Parti Communiste",
+    "count": 13
+   },
+   {
+    "word": "Gestapo",
+    "count": 6
+   },
+   {
+    "word": "URSS",
+    "count": 4
+   },
+   {
+    "word": "Armée Rouge",
+    "count": 3
+   },
+   {
+    "word": "Interné Résistant",
+    "count": 3
+   },
+   {
+    "word": "Communiste",
+    "count": 2
+   },
+   {
+    "word": "Humanité et tu me rappelleras",
+    "count": 2
+   },
+   {
+    "word": "Jeunesses Communistes",
+    "count": 2
+   },
+   {
+    "word": "Jeunes Communistes",
+    "count": 2
+   },
+   {
+    "word": "Remerciez",
+    "count": 2
+   },
+   {
+    "word": "Union Soviétique",
+    "count": 2
+   },
+   {
+    "word": "Libération",
+    "count": 2
+   },
+   {
+    "word": "Liberté",
+    "count": 2
+   },
+   {
+    "word": "EUROPE",
+    "count": 1
+   }
   ]
+ },
+ "figures": [
+  {
+   "figure": "Dieu",
+   "documents": 59,
+   "percentage": 19.7
+  },
+  {
+   "figure": "La Marseillaise",
+   "documents": 9,
+   "percentage": 3.0
+  },
+  {
+   "figure": "Jésus / le Christ",
+   "documents": 6,
+   "percentage": 2.0
+  },
+  {
+   "figure": "Staline",
+   "documents": 5,
+   "percentage": 1.7
+  },
+  {
+   "figure": "L'Armée rouge",
+   "documents": 4,
+   "percentage": 1.3
+  },
+  {
+   "figure": "L'URSS",
+   "documents": 4,
+   "percentage": 1.3
+  },
+  {
+   "figure": "Pétain",
+   "documents": 2,
+   "percentage": 0.7
+  },
+  {
+   "figure": "de Gaulle",
+   "documents": 1,
+   "percentage": 0.3
+  },
+  {
+   "figure": "Hitler",
+   "documents": 1,
+   "percentage": 0.3
+  },
+  {
+   "figure": "Thorez",
+   "documents": 1,
+   "percentage": 0.3
+  },
+  {
+   "figure": "Laval",
+   "documents": 1,
+   "percentage": 0.3
+  },
+  {
+   "figure": "Jeanne d'Arc",
+   "documents": 1,
+   "percentage": 0.3
+  },
+  {
+   "figure": "L'Internationale",
+   "documents": 1,
+   "percentage": 0.3
+  }
+ ],
+ "phrase_stats": [
+  {
+   "phrase": "courage",
+   "documents": 191,
+   "percentage": 63.9
+  },
+  {
+   "phrase": "adieu",
+   "documents": 185,
+   "percentage": 61.9
+  },
+  {
+   "phrase": "ma chère",
+   "documents": 100,
+   "percentage": 33.4
+  },
+  {
+   "phrase": "je meurs",
+   "documents": 82,
+   "percentage": 27.4
+  },
+  {
+   "phrase": "vive la france",
+   "documents": 77,
+   "percentage": 25.8
+  },
+  {
+   "phrase": "mon petit",
+   "documents": 45,
+   "percentage": 15.1
+  },
+  {
+   "phrase": "petite maman",
+   "documents": 33,
+   "percentage": 11.0
+  },
+  {
+   "phrase": "innocent",
+   "documents": 15,
+   "percentage": 5.0
+  }
+ ],
+ "comparison": {
+  "groups": [
+   {
+    "name": "communiste",
+    "size": 197,
+    "avg_words": 422.0
+   },
+   {
+    "name": "autres",
+    "size": 102,
+    "avg_words": 316.0
+   }
+  ],
+  "terms": [
+   "dieu",
+   "camarade",
+   "parti",
+   "france",
+   "maman",
+   "adieu",
+   "courage",
+   "liberté",
+   "vengeance",
+   "prêtre"
+  ],
+  "rates": {
+   "communiste": [
+    11.2,
+    31.0,
+    34.5,
+    43.7,
+    43.7,
+    65.5,
+    67.5,
+    7.1,
+    1.5,
+    5.6
+   ],
+   "autres": [
+    36.3,
+    20.6,
+    15.7,
+    40.2,
+    52.9,
+    52.9,
+    55.9,
+    3.9,
+    2.9,
+    9.8
+   ]
+  }
+ },
+ "clusters": [
+  {
+   "id": 0,
+   "size": 122,
+   "keywords": [
+    "maman",
+    "papa",
+    "bien",
+    "petite",
+    "chérie",
+    "adieu",
+    "chère",
+    "vie",
+    "petit",
+    "dernière",
+    "été",
+    "dieu",
+    "embrasse",
+    "courage",
+    "faire"
+   ]
+  },
+  {
+   "id": 1,
+   "size": 177,
+   "keywords": [
+    "bien",
+    "dernière",
+    "lettre",
+    "adieu",
+    "parents",
+    "chers",
+    "mort",
+    "france",
+    "vie",
+    "chère",
+    "été",
+    "mère",
+    "mourir",
+    "fils",
+    "heures"
+   ]
+  }
+ ],
+ "topics": [
+  {
+   "id": 0,
+   "keywords": [
+    "dernière",
+    "adieu",
+    "lettre",
+    "bien",
+    "mère",
+    "enfants",
+    "chère",
+    "sais",
+    "vie",
+    "père"
+   ]
+  },
+  {
+   "id": 1,
+   "keywords": [
+    "bien",
+    "heures",
+    "été",
+    "colis",
+    "voir",
+    "camarades",
+    "jours",
+    "fus",
+    "temps",
+    "vie"
+   ]
+  },
+  {
+   "id": 2,
+   "keywords": [
+    "bien",
+    "vie",
+    "mort",
+    "lettre",
+    "dernière",
+    "france",
+    "adieu",
+    "faire",
+    "chers",
+    "parents"
+   ]
+  },
+  {
+   "id": 3,
+   "keywords": [
+    "bien",
+    "maman",
+    "dernière",
+    "adieu",
+    "petite",
+    "chère",
+    "lettre",
+    "été",
+    "parents",
+    "papa"
+   ]
+  }
+ ]
 }
