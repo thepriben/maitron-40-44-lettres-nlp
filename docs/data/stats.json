@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T03:58:24.891961+00:00",
+  "generated_at": "2026-07-12T04:35:53.477233+00:00",
   "source_url": "https://fusilles-40-44.maitron.fr/yzfusillesdivers/1-lettres-de-fusilles/",
   "summary": {
     "total_persons": 326,
@@ -124,7 +124,11 @@
   "top_words": [
     {
       "word": "être",
-      "count": 928
+      "count": 995
+    },
+    {
+      "word": "cher",
+      "count": 766
     },
     {
       "word": "dernier",
@@ -132,67 +136,71 @@
     },
     {
       "word": "petit",
-      "count": 683
+      "count": 686
     },
     {
       "word": "bien",
       "count": 641
     },
     {
-      "word": "cher",
-      "count": 580
-    },
-    {
       "word": "lettre",
-      "count": 478
-    },
-    {
-      "word": "mourir",
-      "count": 469
+      "count": 481
     },
     {
       "word": "adieu",
-      "count": 459
+      "count": 460
+    },
+    {
+      "word": "mourir",
+      "count": 455
+    },
+    {
+      "word": "faire",
+      "count": 425
+    },
+    {
+      "word": "aimer",
+      "count": 420
+    },
+    {
+      "word": "avoir",
+      "count": 414
+    },
+    {
+      "word": "savoir",
+      "count": 401
     },
     {
       "word": "vie",
-      "count": 389
+      "count": 388
     },
     {
       "word": "maman",
       "count": 386
     },
     {
-      "word": "bon",
-      "count": 373
+      "word": "chéri",
+      "count": 375
     },
     {
-      "word": "faire",
-      "count": 363
+      "word": "bon",
+      "count": 373
     },
     {
       "word": "heure",
       "count": 363
     },
     {
-      "word": "savoir",
-      "count": 352
-    },
-    {
-      "word": "chéri",
-      "count": 346
+      "word": "vouloir",
+      "count": 350
     },
     {
       "word": "mort",
-      "count": 315
+      "count": 336
     },
     {
-      "word": "vouloir",
-      "count": 307
-    },
-    {
-      "word": "avoir",
-      "count": 296
+      "word": "embrasser",
+      "count": 304
     },
     {
       "word": "parent",
@@ -200,27 +208,23 @@
     },
     {
       "word": "papa",
-      "count": 268
+      "count": 273
     },
     {
-      "word": "aimer",
+      "word": "voir",
       "count": 268
-    },
-    {
-      "word": "embrasser",
-      "count": 260
     },
     {
       "word": "courage",
       "count": 257
     },
     {
-      "word": "voir",
-      "count": 240
+      "word": "dire",
+      "count": 246
     },
     {
       "word": "venir",
-      "count": 239
+      "count": 245
     },
     {
       "word": "fois",
@@ -228,11 +232,11 @@
     },
     {
       "word": "frère",
-      "count": 224
+      "count": 225
     },
     {
-      "word": "chère",
-      "count": 223
+      "word": "écrire",
+      "count": 224
     },
     {
       "word": "france",
@@ -240,233 +244,229 @@
     },
     {
       "word": "heureux",
-      "count": 215
+      "count": 216
     },
     {
       "word": "jour",
       "count": 211
     },
     {
-      "word": "dire",
-      "count": 211
+      "word": "falloir",
+      "count": 204
+    },
+    {
+      "word": "pouvoir",
+      "count": 203
     },
     {
       "word": "penser",
-      "count": 209
+      "count": 202
     },
     {
       "word": "demande",
+      "count": 202
+    },
+    {
+      "word": "famille",
       "count": 201
+    },
+    {
+      "word": "fils",
+      "count": 199
     },
     {
       "word": "ami",
       "count": 199
     },
     {
-      "word": "famille",
-      "count": 198
-    },
-    {
       "word": "grand",
-      "count": 196
-    },
-    {
-      "word": "falloir",
-      "count": 195
-    },
-    {
-      "word": "enfant",
-      "count": 185
-    },
-    {
-      "word": "courageux",
-      "count": 182
+      "count": 197
     }
   ],
   "top_nouns": [
     {
       "word": "lettre",
-      "count": 457
+      "count": 481
     },
     {
       "word": "vie",
-      "count": 389
+      "count": 388
     },
     {
       "word": "heure",
       "count": 363
     },
     {
-      "word": "mort",
-      "count": 303
+      "word": "maman",
+      "count": 338
     },
     {
-      "word": "parent",
-      "count": 282
+      "word": "mort",
+      "count": 312
     },
     {
       "word": "chéri",
-      "count": 281
+      "count": 296
     },
     {
-      "word": "courage",
-      "count": 257
+      "word": "parent",
+      "count": 283
     },
     {
       "word": "fois",
       "count": 237
     },
     {
-      "word": "chère",
-      "count": 223
+      "word": "frère",
+      "count": 225
+    },
+    {
+      "word": "courage",
+      "count": 224
     },
     {
       "word": "jour",
-      "count": 210
+      "count": 211
+    },
+    {
+      "word": "famille",
+      "count": 201
+    },
+    {
+      "word": "fils",
+      "count": 199
     },
     {
       "word": "ami",
       "count": 199
     },
     {
-      "word": "famille",
-      "count": 197
-    },
-    {
-      "word": "frère",
-      "count": 191
-    },
-    {
       "word": "enfant",
-      "count": 184
+      "count": 189
     },
     {
       "word": "papa",
-      "count": 164
-    },
-    {
-      "word": "fils",
-      "count": 163
+      "count": 178
     },
     {
       "word": "femme",
       "count": 163
     },
     {
-      "word": "adieu",
-      "count": 160
+      "word": "mère",
+      "count": 162
     },
     {
       "word": "camarade",
-      "count": 151
+      "count": 160
     },
     {
-      "word": "moment",
-      "count": 138
+      "word": "cœur",
+      "count": 142
     }
   ],
   "top_verbs": [
     {
       "word": "mourir",
-      "count": 459
-    },
-    {
-      "word": "savoir",
-      "count": 332
-    },
-    {
-      "word": "faire",
-      "count": 312
-    },
-    {
-      "word": "vouloir",
-      "count": 302
-    },
-    {
-      "word": "embrasser",
-      "count": 251
+      "count": 452
     },
     {
       "word": "aimer",
-      "count": 247
+      "count": 408
     },
     {
-      "word": "venir",
-      "count": 233
+      "word": "savoir",
+      "count": 383
+    },
+    {
+      "word": "faire",
+      "count": 376
+    },
+    {
+      "word": "vouloir",
+      "count": 349
+    },
+    {
+      "word": "embrasser",
+      "count": 287
     },
     {
       "word": "voir",
-      "count": 229
+      "count": 264
     },
     {
-      "word": "être",
-      "count": 223
+      "word": "venir",
+      "count": 245
     },
     {
-      "word": "penser",
-      "count": 194
-    },
-    {
-      "word": "falloir",
-      "count": 192
-    },
-    {
-      "word": "avoir",
-      "count": 190
-    },
-    {
-      "word": "demande",
-      "count": 185
-    },
-    {
-      "word": "pouvoir",
-      "count": 164
-    },
-    {
-      "word": "devoir",
-      "count": 132
+      "word": "dire",
+      "count": 232
     },
     {
       "word": "écrire",
-      "count": 131
+      "count": 221
     },
     {
-      "word": "donner",
-      "count": 124
+      "word": "falloir",
+      "count": 203
+    },
+    {
+      "word": "penser",
+      "count": 200
+    },
+    {
+      "word": "pouvoir",
+      "count": 199
+    },
+    {
+      "word": "avoir",
+      "count": 191
+    },
+    {
+      "word": "demande",
+      "count": 190
+    },
+    {
+      "word": "espérer",
+      "count": 165
     },
     {
       "word": "oublier",
-      "count": 118
+      "count": 151
     },
     {
-      "word": "passer",
-      "count": 118
+      "word": "revoir",
+      "count": 150
     },
     {
       "word": "vivre",
-      "count": 114
+      "count": 145
+    },
+    {
+      "word": "donner",
+      "count": 137
     }
   ],
   "top_adjectives": [
     {
       "word": "dernier",
-      "count": 758
-    },
-    {
-      "word": "petit",
-      "count": 657
+      "count": 759
     },
     {
       "word": "cher",
-      "count": 542
+      "count": 740
+    },
+    {
+      "word": "petit",
+      "count": 683
     },
     {
       "word": "bon",
-      "count": 362
+      "count": 358
     },
     {
       "word": "heureux",
-      "count": 189
+      "count": 208
     },
     {
       "word": "grand",
@@ -474,39 +474,39 @@
     },
     {
       "word": "courageux",
-      "count": 114
-    },
-    {
-      "word": "espèr",
-      "count": 79
-    },
-    {
-      "word": "aurai",
-      "count": 77
-    },
-    {
-      "word": "jeune",
-      "count": 74
+      "count": 181
     },
     {
       "word": "nouveau",
-      "count": 71
+      "count": 78
+    },
+    {
+      "word": "fier",
+      "count": 74
     },
     {
       "word": "dur",
-      "count": 69
+      "count": 74
     },
     {
-      "word": "allemand",
-      "count": 64
+      "word": "bel",
+      "count": 73
     },
     {
-      "word": "écrir",
-      "count": 63
+      "word": "jeune",
+      "count": 72
     },
     {
-      "word": "pardon",
-      "count": 59
+      "word": "meilleur",
+      "count": 71
+    },
+    {
+      "word": "haut",
+      "count": 68
+    },
+    {
+      "word": "vif",
+      "count": 66
     }
   ],
   "top_words_by_doc": [
@@ -515,12 +515,16 @@
       "count": 262
     },
     {
+      "word": "être",
+      "count": 248
+    },
+    {
       "word": "lettre",
       "count": 244
     },
     {
-      "word": "être",
-      "count": 239
+      "word": "cher",
+      "count": 229
     },
     {
       "word": "bien",
@@ -529,10 +533,6 @@
     {
       "word": "mourir",
       "count": 210
-    },
-    {
-      "word": "cher",
-      "count": 209
     },
     {
       "word": "adieu",
@@ -548,43 +548,43 @@
     },
     {
       "word": "faire",
-      "count": 168
+      "count": 176
+    },
+    {
+      "word": "avoir",
+      "count": 176
+    },
+    {
+      "word": "embrasser",
+      "count": 175
+    },
+    {
+      "word": "aimer",
+      "count": 174
+    },
+    {
+      "word": "savoir",
+      "count": 169
+    },
+    {
+      "word": "mort",
+      "count": 166
     },
     {
       "word": "vie",
       "count": 162
     },
     {
-      "word": "savoir",
-      "count": 161
-    },
-    {
-      "word": "embrasser",
-      "count": 161
-    },
-    {
-      "word": "mort",
-      "count": 159
+      "word": "vouloir",
+      "count": 160
     },
     {
       "word": "bon",
       "count": 152
     },
     {
-      "word": "vouloir",
-      "count": 151
-    },
-    {
-      "word": "avoir",
-      "count": 148
-    },
-    {
       "word": "venir",
-      "count": 141
-    },
-    {
-      "word": "parent",
-      "count": 140
+      "count": 143
     },
     {
       "word": "maman",
@@ -595,26 +595,22 @@
     "locations": [
       {
         "word": "la France",
-        "count": 93
+        "count": 109
       },
       {
         "word": "Fresnes",
-        "count": 46
-      },
-      {
-        "word": "France",
-        "count": 25
-      },
-      {
-        "word": "Paris",
-        "count": 24
+        "count": 44
       },
       {
         "word": "Allemands",
-        "count": 23
+        "count": 24
       },
       {
-        "word": "Embrasse",
+        "word": "Paris",
+        "count": 21
+      },
+      {
+        "word": "France",
         "count": 21
       },
       {
@@ -622,137 +618,149 @@
         "count": 20
       },
       {
-        "word": "Chers",
-        "count": 14
-      },
-      {
-        "word": "Parents",
-        "count": 13
-      },
-      {
-        "word": "Odette",
-        "count": 12
-      },
-      {
-        "word": "Patrie",
-        "count": 11
-      },
-      {
-        "word": "Arras",
-        "count": 11
-      },
-      {
         "word": "Allemagne",
         "count": 10
-      },
-      {
-        "word": "Yvette",
-        "count": 10
-      },
-      {
-        "word": "Yvonne",
-        "count": 10
-      },
-      {
-        "word": "Mr",
-        "count": 10
-      },
-      {
-        "word": "Paulette",
-        "count": 9
       },
       {
         "word": "Seine",
         "count": 9
       },
       {
-        "word": "Denise",
-        "count": 9
-      },
-      {
-        "word": "Gilberte",
+        "word": "de France",
         "count": 8
       },
       {
-        "word": "de France",
-        "count": 7
+        "word": "Arras",
+        "count": 8
       },
       {
         "word": "Toulouse",
-        "count": 7
+        "count": 6
       },
       {
         "word": "Orléans",
-        "count": 7
+        "count": 6
       },
       {
         "word": "Nantes",
-        "count": 7
+        "count": 5
       },
       {
-        "word": "II",
-        "count": 6
+        "word": "Ivry-sur-Seine",
+        "count": 5
+      },
+      {
+        "word": "Loos",
+        "count": 5
+      },
+      {
+        "word": "Dijon",
+        "count": 5
+      },
+      {
+        "word": "Châteaubriant",
+        "count": 5
+      },
+      {
+        "word": "Val-de-Marne",
+        "count": 4
+      },
+      {
+        "word": "Rosendaël",
+        "count": 4
+      },
+      {
+        "word": "Amiens",
+        "count": 4
+      },
+      {
+        "word": "Laon",
+        "count": 4
+      },
+      {
+        "word": "Mont-Valérien",
+        "count": 4
+      },
+      {
+        "word": "Saint-Malo",
+        "count": 4
+      },
+      {
+        "word": "Vannes",
+        "count": 4
+      },
+      {
+        "word": "Rhône",
+        "count": 4
       }
     ],
     "persons": [
       {
         "word": "Jean",
-        "count": 53
+        "count": 42
       },
       {
         "word": "René",
-        "count": 31
+        "count": 32
+      },
+      {
+        "word": "Roger",
+        "count": 30
       },
       {
         "word": "Claude",
         "count": 29
       },
       {
-        "word": "Roger",
-        "count": 28
-      },
-      {
-        "word": "Jacqueline",
-        "count": 20
-      },
-      {
-        "word": "Henri",
-        "count": 20
+        "word": "Marie",
+        "count": 22
       },
       {
         "word": "Maurice",
-        "count": 20
+        "count": 22
       },
       {
-        "word": "Marie",
+        "word": "Henri",
+        "count": 19
+      },
+      {
+        "word": "Jacqueline",
         "count": 18
+      },
+      {
+        "word": "Paulette",
+        "count": 16
+      },
+      {
+        "word": "Robert",
+        "count": 16
       },
       {
         "word": "Marcel",
         "count": 16
       },
       {
+        "word": "Henriette",
+        "count": 15
+      },
+      {
         "word": "Louis",
         "count": 15
       },
       {
-        "word": "Robert",
+        "word": "Suzanne",
         "count": 15
+      },
+      {
+        "word": "Yvonne",
+        "count": 14
       },
       {
         "word": "Raymond",
         "count": 13
       },
       {
-        "word": "Pierrot",
-        "count": 13
-      },
-      {
-        "word": "Suzanne",
-        "count": 13
-      },
-      {
-        "word": "Embrassez",
+        "word": "Renée",
         "count": 12
       },
       {
@@ -760,81 +768,73 @@
         "count": 12
       },
       {
+        "word": "Pierrot",
+        "count": 12
+      },
+      {
         "word": "Josette",
         "count": 12
-      },
-      {
-        "word": "Rolande",
-        "count": 12
-      },
-      {
-        "word": "Madeleine",
-        "count": 12
-      },
-      {
-        "word": "Mes",
-        "count": 11
       }
     ],
     "organisations": [
       {
-        "word": "Soyez",
-        "count": 32
-      },
-      {
         "word": "Parti",
-        "count": 17
-      },
-      {
-        "word": "Mes",
-        "count": 10
+        "count": 15
       },
       {
         "word": "Parti Communiste",
-        "count": 8
+        "count": 7
       },
       {
         "word": "Gestapo",
-        "count": 5
-      },
-      {
-        "word": "France",
-        "count": 4
-      },
-      {
-        "word": "PS",
-        "count": 4
-      },
-      {
-        "word": "Rosita",
-        "count": 4
-      },
-      {
-        "word": "Cher Papa",
-        "count": 3
+        "count": 6
       },
       {
         "word": "Parti communiste",
-        "count": 3
+        "count": 4
       },
       {
         "word": "URSS",
-        "count": 3
+        "count": 4
       },
       {
-        "word": "Ayez",
-        "count": 3
-      },
-      {
-        "word": "Fleur",
-        "count": 3
-      },
-      {
-        "word": "Humanité",
+        "word": "Armée Rouge",
         "count": 2
       },
       {
-        "word": "Germaine",
+        "word": "Communiste",
+        "count": 2
+      },
+      {
+        "word": "Humanité et tu me rappelleras",
+        "count": 2
+      },
+      {
+        "word": "Interné Résistant",
+        "count": 2
+      },
+      {
+        "word": "Jeunesses Communistes",
+        "count": 2
+      },
+      {
+        "word": "Jeunes Communistes",
+        "count": 2
+      },
+      {
+        "word": "Remerciez",
+        "count": 2
+      },
+      {
+        "word": "parti Communiste",
+        "count": 2
+      },
+      {
+        "word": "Libération",
+        "count": 2
+      },
+      {
+        "word": "Liberté",
         "count": 2
       }
     ]

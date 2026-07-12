@@ -43,6 +43,8 @@ ENTITY_STOP = {
     "vive", "adieu", "maman", "sois", "monsieur", "madame", "cher", "chère",
     "chéri", "chérie", "français", "française", "dieu", "papa", "maman",
     "bonjour", "bonne", "courage", "merci", "petite", "petit", "mort",
+    "chers", "amis", "ps", "chers parents", "chers amis", "vive la france",
+    "chère", "chéris", "mes chers", "mes chers parents", "soyez", "embrasse",
 }
 
 
@@ -165,7 +167,12 @@ def main() -> None:
     df["word_count"] = df["letter_text"].apply(word_count)
     df["has_letter"] = df["letter_text"].str.strip().astype(bool)
 
-    nlp = spacy.load("fr_core_news_sm")
+    # Grand modèle pour une reconnaissance d'entités nommées plus fine ;
+    # repli sur le petit modèle s'il n'est pas installé.
+    try:
+        nlp = spacy.load("fr_core_news_lg")
+    except OSError:
+        nlp = spacy.load("fr_core_news_sm")
     french_stopwords = nlp.Defaults.stop_words
 
     texts = df["letter_text"].tolist()
