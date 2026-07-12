@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-07-12T06:21:09.588902+00:00",
+ "generated_at": "2026-07-12T16:13:19.222825+00:00",
  "source_url": "https://fusilles-40-44.maitron.fr/yzfusillesdivers/1-lettres-de-fusilles/",
  "model": "fr_core_news_lg",
  "summary": {
@@ -12,7 +12,7 @@
   "with_bio": 311,
   "with_age": 301,
   "median_age": 24,
-  "located": 262
+  "located": 300
  },
  "timeline": [
   {
@@ -334,6 +334,24 @@
    ]
   },
   {
+   "place": "Paris",
+   "lat": 48.8566,
+   "lon": 2.3522,
+   "count": 17,
+   "names": [
+    "ARTHUS Jean, Marie, Ernest, Maurice",
+    "BAUDRY Jacques, Michel, Régis, Francis [dit Marchand]",
+    "BONSERGENT Jacques, Marie, Georges",
+    "CHAMPION Étienne, Louis, René [dit CHAMPION Louis]",
+    "DE LAUNOY Jean, Gabriel",
+    "DIEZ André, Philippe [dit Dédé le boiteux]",
+    "FONTAINE Jules, Constant, Eugène",
+    "FONTAINE Roger, Jules, Constant, Joseph",
+    "GRELOT Pierre",
+    "HERREWYN Georges, Éloi, Henri"
+   ]
+  },
+  {
    "place": "La Doua (Villeurbanne)",
    "lat": 45.783,
    "lon": 4.872,
@@ -405,21 +423,6 @@
    ]
   },
   {
-   "place": "citadelle de Besançon",
-   "lat": 47.15,
-   "lon": 6.35,
-   "count": 7,
-   "names": [
-    "AYMONNIN Raymond, René, Eugène",
-    "GRAPPIN Jean-Paul",
-    "MARTIN Aloïs, Jacques",
-    "PAQUERIAUD Paul, François, alias Pierre",
-    "PUGET  Marcellin [Léon, Marcellin]",
-    "PUGET Roger, Marcel",
-    "ROTHAMER Georges, Gérard"
-   ]
-  },
-  {
    "place": "Munich (Allemagne)",
    "lat": 48.137,
    "lon": 11.575,
@@ -435,9 +438,23 @@
    ]
   },
   {
+   "place": "Nantes",
+   "lat": 47.2316356767,
+   "lon": -1.54831008605,
+   "count": 6,
+   "names": [
+    "BOISSARD Marcel, Ollivier",
+    "COLAS Joseph, Léon, Pierre",
+    "DOUVILLEZ Robert, Julien, Albert",
+    "FOURNY Alexandre, Louis, Marie, Joseph",
+    "GLOU Jean-Pierre, Louis, Raymond",
+    "LACAZETTE Maurice [LACAZETTE Camille dit <em>Maurice</em>]"
+   ]
+  },
+  {
    "place": "Épine",
-   "lat": 48.95,
-   "lon": 4.3,
+   "lat": 48.9939672818,
+   "lon": 4.44934691033,
    "count": 5,
    "names": [
     "BAUDRY Robert, Armand",
@@ -448,22 +465,22 @@
    ]
   },
   {
-   "place": "Nantes",
-   "lat": 47.35,
-   "lon": -1.7,
+   "place": "Toulouse",
+   "lat": 43.5963814303,
+   "lon": 1.43167293364,
    "count": 5,
    "names": [
-    "BOISSARD Marcel, Ollivier",
-    "COLAS Joseph, Léon, Pierre",
-    "DOUVILLEZ Robert, Julien, Albert",
-    "FOURNY Alexandre, Louis, Marie, Joseph",
-    "LACAZETTE Maurice [LACAZETTE Camille dit <em>Maurice</em>]"
+    "BLANCHETON Jean, Roger",
+    "BOIZARD Charles",
+    "LAGUERRE François, Joseph",
+    "LANGER Marcel [LANGER Mendel, dit]",
+    "MATHOU Paul, Jacques, François, Henri"
    ]
   },
   {
    "place": "Vannes",
-   "lat": 47.85,
-   "lon": -2.8,
+   "lat": 47.6597493766,
+   "lon": -2.75714329498,
    "count": 5,
    "names": [
     "CONAN Henri, Armand, Marie",
@@ -474,9 +491,35 @@
    ]
   },
   {
+   "place": "Dijon",
+   "lat": 47.3229437965,
+   "lon": 5.03788805877,
+   "count": 5,
+   "names": [
+    "GAUDILLOT Louis, André",
+    "HAMARD Édouard",
+    "LAFORGE René, Georges. Pseudonyme: Chéron",
+    "SIXDENIER Paul, Marie",
+    "SOYE Léon, Émile"
+   ]
+  },
+  {
+   "place": "terrain militaire du Bêle à Nantes",
+   "lat": 47.2316356767,
+   "lon": -1.54831008605,
+   "count": 5,
+   "names": [
+    "GRELEAU Pierre, Louis, Marcel",
+    "JAMET Guy, Yvon",
+    "JOST Léon, Louis, Marie",
+    "PLATIAU Jean, Émile",
+    "ROUAULT André, Pierre"
+   ]
+  },
+  {
    "place": "fort des Ayvelles",
-   "lat": 49.6,
-   "lon": 4.65,
+   "lat": 49.7217923857,
+   "lon": 4.75240985606,
    "count": 4,
    "names": [
     "ARNOULD René, Alexandre",
@@ -486,15 +529,39 @@
    ]
   },
   {
-   "place": "Toulouse",
-   "lat": 43.35,
-   "lon": 1.2,
+   "place": "Doubs",
+   "lat": 47.15,
+   "lon": 6.35,
    "count": 4,
    "names": [
-    "BLANCHETON Jean, Roger",
-    "BOIZARD Charles",
-    "LANGER Marcel [LANGER Mendel, dit]",
-    "MATHOU Paul, Jacques, François, Henri"
+    "AYMONNIN Raymond, René, Eugène",
+    "GLASSON Roger",
+    "PUGET  Marcellin [Léon, Marcellin]",
+    "PUGET Roger, Marcel"
+   ]
+  },
+  {
+   "place": "Saint-Quentin",
+   "lat": 49.8472336321,
+   "lon": 3.27769499462,
+   "count": 4,
+   "names": [
+    "CHARPENTIER Henri",
+    "DESJARDIN Edmond, Hubert",
+    "DESJARDIN Lucien, Edmond, Simon",
+    "RÉGHEM Albert, Auguste"
+   ]
+  },
+  {
+   "place": "citadelle de Besançon",
+   "lat": 47.2553872249,
+   "lon": 6.01948696494,
+   "count": 4,
+   "names": [
+    "GRAPPIN Jean-Paul",
+    "MARTIN Aloïs, Jacques",
+    "PAQUERIAUD Paul, François, alias Pierre",
+    "ROTHAMER Georges, Gérard"
    ]
   },
   {
@@ -532,8 +599,8 @@
   },
   {
    "place": "Saint-Jacques-de-la-Lande",
-   "lat": 48.15,
-   "lon": -1.65,
+   "lat": 48.0755625884,
+   "lon": -1.72405381322,
    "count": 3,
    "names": [
     "CHÉREL Louis, Joseph, Jean",
@@ -543,8 +610,8 @@
   },
   {
    "place": "Laon",
-   "lat": 49.55,
-   "lon": 3.55,
+   "lat": 49.5679724897,
+   "lon": 3.62089561902,
    "count": 3,
    "names": [
     "DAURIOL André, Jules",
@@ -553,41 +620,20 @@
    ]
   },
   {
-   "place": "Saint-Quentin",
-   "lat": 49.55,
-   "lon": 3.55,
+   "place": "Besançon",
+   "lat": 47.2553872249,
+   "lon": 6.01948696494,
    "count": 3,
    "names": [
-    "DESJARDIN Edmond, Hubert",
-    "DESJARDIN Lucien, Edmond, Simon",
-    "RÉGHEM Albert, Auguste"
-   ]
-  },
-  {
-   "place": "terrain militaire du Bêle à Nantes",
-   "lat": 47.35,
-   "lon": -1.7,
-   "count": 3,
-   "names": [
-    "GRELEAU Pierre, Louis, Marcel",
-    "PLATIAU Jean, Émile",
-    "ROUAULT André, Pierre"
-   ]
-  },
-  {
-   "place": "Biard",
-   "lat": 46.55,
-   "lon": 0.45,
-   "count": 2,
-   "names": [
-    "BANDLÉ Louis, Albert",
-    "GRINBAUM Bernard"
+    "FERTET Henri, Claude",
+    "GLADOUX Philippe, Marie, Jean, Antoine, alias Julien",
+    "PAILLARD René, Léon, Jean"
    ]
   },
   {
    "place": "champ de tir de Challuy-Nevers",
-   "lat": 47.1,
-   "lon": 3.5,
+   "lat": 46.9881194908,
+   "lon": 3.15689130958,
    "count": 2,
    "names": [
     "BAR Francis, Paul, Clément",
@@ -596,8 +642,8 @@
   },
   {
    "place": "Amiens",
-   "lat": 49.95,
-   "lon": 2.3,
+   "lat": 49.9009532186,
+   "lon": 2.29007445539,
    "count": 2,
    "names": [
     "BLOT Gaston, Philogène, Désiré",
@@ -606,8 +652,8 @@
   },
   {
    "place": "Tulle",
-   "lat": 45.35,
-   "lon": 1.9,
+   "lat": 45.2731516999,
+   "lon": 1.76313875655,
    "count": 2,
    "names": [
     "BONNET Georges",
@@ -616,8 +662,8 @@
   },
   {
    "place": "dunes de La Torche en Plomeur",
-   "lat": 48.25,
-   "lon": -4.05,
+   "lat": 47.8382971548,
+   "lon": -4.29445064417,
    "count": 2,
    "names": [
     "CARIOU Étienne",
@@ -625,9 +671,19 @@
    ]
   },
   {
+   "place": "Prison de la Santé (Paris XIVe)",
+   "lat": 48.8339,
+   "lon": 2.345,
+   "count": 2,
+   "names": [
+    "CATELAS Jean, Joseph",
+    "DALMAS André, Joseph, Henri. Écrit parfois DELMAS André"
+   ]
+  },
+  {
    "place": "Lille",
-   "lat": 50.45,
-   "lon": 3.2,
+   "lat": 50.6317183168,
+   "lon": 3.04783272312,
    "count": 2,
    "names": [
     "DUBOIS Jean",
@@ -635,19 +691,9 @@
    ]
   },
   {
-   "place": "Besançon",
-   "lat": 47.15,
-   "lon": 6.35,
-   "count": 2,
-   "names": [
-    "FERTET Henri, Claude",
-    "PAILLARD René, Léon, Jean"
-   ]
-  },
-  {
    "place": "Vallée-aux-Loups à Châtenay-Malabry",
-   "lat": 48.85,
-   "lon": 2.35,
+   "lat": 48.7681690197,
+   "lon": 2.26282598525,
    "count": 2,
    "names": [
     "GAUTHEROT Henri, Auguste",
@@ -656,8 +702,8 @@
   },
   {
    "place": "Amiens  suite à une condamnation à mort",
-   "lat": 49.95,
-   "lon": 2.3,
+   "lat": 49.9009532186,
+   "lon": 2.29007445539,
    "count": 2,
    "names": [
     "MASSON Émile, Valentin, Joseph",
@@ -675,8 +721,8 @@
   },
   {
    "place": "Gouesnach",
-   "lat": 48.25,
-   "lon": -4.05,
+   "lat": 47.9170974917,
+   "lon": -4.11118575976,
    "count": 1,
    "names": [
     "AUFFRET Jean, Henri"
@@ -684,8 +730,8 @@
   },
   {
    "place": "camp d’Auvours-Le Mans",
-   "lat": 48.0,
-   "lon": 0.2,
+   "lat": 47.9885256718,
+   "lon": 0.200030493539,
    "count": 1,
    "names": [
     "AUVINET Alex [AUVINET Alexis, dit]. Pseudonymes : LEGALL, LE FUR, Arthur"
@@ -701,36 +747,45 @@
    ]
   },
   {
+   "place": "Biard",
+   "lat": 46.5839207726,
+   "lon": 0.359947653003,
+   "count": 1,
+   "names": [
+    "BANDLÉ Louis, Albert"
+   ]
+  },
+  {
    "place": "Épinal",
-   "lat": 48.2,
-   "lon": 6.4,
+   "lat": 48.1631202656,
+   "lon": 6.47989286928,
    "count": 1,
    "names": [
     "BARBIER René, Albert, Marcel"
    ]
   },
   {
+   "place": "prison Saint-Paul",
+   "lat": 45.2063786861,
+   "lon": 1.89796054696,
+   "count": 1,
+   "names": [
+    "BERTRAND Émile"
+   ]
+  },
+  {
    "place": "Cuincy",
-   "lat": 50.45,
-   "lon": 3.2,
+   "lat": 50.3743818914,
+   "lon": 3.03412629786,
    "count": 1,
    "names": [
     "CARON Louis, Victor"
    ]
   },
   {
-   "place": "Saint-Quentin  après condamnation à mort",
-   "lat": 49.55,
-   "lon": 3.55,
-   "count": 1,
-   "names": [
-    "CHARPENTIER Henri"
-   ]
-  },
-  {
    "place": "Saint-Jean-de-la-Ruelle",
-   "lat": 47.9,
-   "lon": 2.35,
+   "lat": 47.9116141172,
+   "lon": 1.87108144709,
    "count": 1,
    "names": [
     "CHEVRIN Louis, Ernest"
@@ -738,8 +793,8 @@
   },
   {
    "place": "citadelle de  Besançon",
-   "lat": 47.15,
-   "lon": 6.35,
+   "lat": 47.2553872249,
+   "lon": 6.01948696494,
    "count": 1,
    "names": [
     "COMPAGNON Jean, Auguste"
@@ -747,8 +802,8 @@
   },
   {
    "place": "Saint-Nazaire",
-   "lat": 47.35,
-   "lon": -1.7,
+   "lat": 47.2802857028,
+   "lon": -2.25379927249,
    "count": 1,
    "names": [
     "DE NEYMAN Jean, Casimir"
@@ -756,8 +811,8 @@
   },
   {
    "place": "Saint-Roch",
-   "lat": 47.25,
-   "lon": 0.7,
+   "lat": 47.4460052887,
+   "lon": 0.574049173114,
    "count": 1,
    "names": [
     "DEROUET Paul, Henri"
@@ -765,8 +820,8 @@
   },
   {
    "place": "Pointe de Mousterlin",
-   "lat": 48.25,
-   "lon": -4.05,
+   "lat": 47.8783078862,
+   "lon": -4.01834628474,
    "count": 1,
    "names": [
     "DUBOIS Maxime, Louis, Paul"
@@ -774,8 +829,8 @@
   },
   {
    "place": "camp d’Auvours",
-   "lat": 48.0,
-   "lon": 0.2,
+   "lat": 48.0162619913,
+   "lon": 0.333986746648,
    "count": 1,
    "names": [
     "ESTIVALS Robert, Lucien, écrit aussi ESTIVAL Pseudonymes : ANDRÉ, LOUIS"
@@ -783,8 +838,8 @@
   },
   {
    "place": "Nevers",
-   "lat": 47.1,
-   "lon": 3.5,
+   "lat": 46.9425745079,
+   "lon": 3.14061478033,
    "count": 1,
    "names": [
     "FOUCHÈRE Louis, Jacques"
@@ -792,8 +847,8 @@
   },
   {
    "place": "champ de tir de Biard près de Poitiers",
-   "lat": 46.55,
-   "lon": 0.45,
+   "lat": 46.5839207726,
+   "lon": 0.359947653003,
    "count": 1,
    "names": [
     "FRANÇOIS René"
@@ -809,18 +864,27 @@
    ]
   },
   {
-   "place": "Doubs",
-   "lat": 47.15,
-   "lon": 6.35,
+   "place": "Fontevraud",
+   "lat": 47.4,
+   "lon": -0.55,
    "count": 1,
    "names": [
-    "GLASSON Roger"
+    "GOUALARD Robert, Paul"
+   ]
+  },
+  {
+   "place": "Vienne",
+   "lat": 46.55,
+   "lon": 0.45,
+   "count": 1,
+   "names": [
+    "GRINBAUM Bernard"
    ]
   },
   {
    "place": "camp du Bête à Nantes",
-   "lat": 47.35,
-   "lon": -1.7,
+   "lat": 47.2316356767,
+   "lon": -1.54831008605,
    "count": 1,
    "names": [
     "GROCHOCKI Zygmut ou Siegmond"
@@ -828,8 +892,8 @@
   },
   {
    "place": "champ de tir du Bêle à Nantes",
-   "lat": 47.35,
-   "lon": -1.7,
+   "lat": 47.2316356767,
+   "lon": -1.54831008605,
    "count": 1,
    "names": [
     "GROLLEAU Jean, Louis, Narcisse, Georges"
@@ -837,8 +901,8 @@
   },
   {
    "place": "pointe de Mousterlin",
-   "lat": 48.25,
-   "lon": -4.05,
+   "lat": 47.8783078862,
+   "lon": -4.01834628474,
    "count": 1,
    "names": [
     "GUÉGUEN Roger, Pierre, Jacques"
@@ -846,35 +910,53 @@
   },
   {
    "place": "stand de tir du Madrillet",
-   "lat": 49.65,
-   "lon": 1.0,
+   "lat": 49.4093798045,
+   "lon": 1.03999262153,
    "count": 1,
    "names": [
     "GUÉNOT Raymond, Alexandre, Louis"
    ]
   },
   {
+   "place": "terrain de tir du Bêle à Nantes",
+   "lat": 47.2316356767,
+   "lon": -1.54831008605,
+   "count": 1,
+   "names": [
+    "HERVÉ Raymond, Yves, Victor"
+   ]
+  },
+  {
    "place": "citadelle de Lille",
-   "lat": 50.45,
-   "lon": 3.2,
+   "lat": 50.6317183168,
+   "lon": 3.04783272312,
    "count": 1,
    "names": [
     "JOLY Félicien"
    ]
   },
   {
-   "place": "Clermont-Ferrand  après condamnation",
-   "lat": 45.7,
-   "lon": 3.15,
+   "place": "Clermont-Ferrand",
+   "lat": 45.7856492991,
+   "lon": 3.11554542903,
    "count": 1,
    "names": [
     "JUGE Marc-Roland"
    ]
   },
   {
+   "place": "frontstalag 122 de Compiègne-Royallieu",
+   "lat": 49.3990601478,
+   "lon": 2.85317249363,
+   "count": 1,
+   "names": [
+    "L'HÉVÉDER Roger"
+   ]
+  },
+  {
    "place": "terrain du Bêle à Nantes",
-   "lat": 47.35,
-   "lon": -1.7,
+   "lat": 47.2316356767,
+   "lon": -1.54831008605,
    "count": 1,
    "names": [
     "LAGATHU Maurice"
@@ -882,8 +964,8 @@
   },
   {
    "place": "Moulin-sous-Touvent",
-   "lat": 49.4,
-   "lon": 2.4,
+   "lat": 49.4655313245,
+   "lon": 3.0666237868,
    "count": 1,
    "names": [
     "LEFEBVRE Arthur"
@@ -891,17 +973,26 @@
   },
   {
    "place": "Bourges",
-   "lat": 47.05,
-   "lon": 2.5,
+   "lat": 47.0749572013,
+   "lon": 2.40417137557,
    "count": 1,
    "names": [
     "LEGEAY Robert, Henri, Noël"
    ]
   },
   {
+   "place": "Fort de Breendonk (Belgique)",
+   "lat": 51.056,
+   "lon": 4.339,
+   "count": 1,
+   "names": [
+    "LELONG Gaston [Pseudonyme : Étienne VASSEUR]"
+   ]
+  },
+  {
    "place": "Saint-Lô",
-   "lat": 49.08,
-   "lon": -1.3,
+   "lat": 49.1099624249,
+   "lon": -1.07755642702,
    "count": 1,
    "names": [
     "LEMAIRE Maurice, Joseph"
@@ -909,8 +1000,8 @@
   },
   {
    "place": "camp d’Auvours à Champagné",
-   "lat": 48.0,
-   "lon": 0.2,
+   "lat": 48.0162619913,
+   "lon": 0.333986746648,
    "count": 1,
    "names": [
     "LESVEN Jules, François, Marie. Pseudonymes : JEAN, GUILLOU Jean"
@@ -918,8 +1009,8 @@
   },
   {
    "place": "Frotey-lès Vesoul",
-   "lat": 47.65,
-   "lon": 6.1,
+   "lat": 47.6293186194,
+   "lon": 6.19415622549,
    "count": 1,
    "names": [
     "MAÎTRE Bernard, Georges"
@@ -927,8 +1018,8 @@
   },
   {
    "place": "fort du Vert-Galant à Wambrechies",
-   "lat": 50.45,
-   "lon": 3.2,
+   "lat": 50.6957054596,
+   "lon": 3.0473159475,
    "count": 1,
    "names": [
     "MARTEL Aimable, Henri. Dit souvent MARTEL Henri"
@@ -936,26 +1027,44 @@
   },
   {
    "place": "Sévrier  par les Groupes mobiles de réserve",
-   "lat": 46.05,
-   "lon": 6.4,
+   "lat": 45.8555012829,
+   "lon": 6.13806338899,
    "count": 1,
    "names": [
     "MOËNNE Jean, Fernand"
    ]
   },
   {
+   "place": "prison de Fontevrault-l’Abbaye",
+   "lat": 47.4,
+   "lon": -0.55,
+   "count": 1,
+   "names": [
+    "MONETTI Joseph, Constant, Mathias"
+   ]
+  },
+  {
    "place": "Frotey-lès-Vesoul  suite à une condamnation à mort",
-   "lat": 47.65,
-   "lon": 6.1,
+   "lat": 47.6293186194,
+   "lon": 6.19415622549,
    "count": 1,
    "names": [
     "MONGIN Jules, Edmond"
    ]
   },
   {
+   "place": "Pforzheim (Allemagne)",
+   "lat": 48.891,
+   "lon": 8.698,
+   "count": 1,
+   "names": [
+    "PAYEN Louis,  Paul, Marie"
+   ]
+  },
+  {
    "place": "Vallée-aux-Loups",
-   "lat": 48.85,
-   "lon": 2.35,
+   "lat": 48.7681690197,
+   "lon": 2.26282598525,
    "count": 1,
    "names": [
     "PELLETIER Louis, Robert"
@@ -963,8 +1072,8 @@
   },
   {
    "place": "Millau",
-   "lat": 44.3,
-   "lon": 2.65,
+   "lat": 44.0976252203,
+   "lon": 3.11705384129,
    "count": 1,
    "names": [
     "PERRUTEL Marceau [alias DURAND dans la Résistance]"
@@ -972,8 +1081,8 @@
   },
   {
    "place": "Villeurbanne",
-   "lat": 45.85,
-   "lon": 4.65,
+   "lat": 45.7707704179,
+   "lon": 4.88845817426,
    "count": 1,
    "names": [
     "POPOUNEAU Maurice, Henri"
@@ -981,8 +1090,8 @@
   },
   {
    "place": "Nîmes",
-   "lat": 43.95,
-   "lon": 4.2,
+   "lat": 43.844938394,
+   "lon": 4.34806796996,
    "count": 1,
    "names": [
     "ROBERT Jean, Auguste"
@@ -990,17 +1099,26 @@
   },
   {
    "place": "Caen",
-   "lat": 49.1,
-   "lon": -0.35,
+   "lat": 49.1847936737,
+   "lon": -0.369801713036,
    "count": 1,
    "names": [
     "SAMPAIX Lucien"
    ]
   },
   {
+   "place": "Brandebourg (Allemagne)",
+   "lat": 52.412,
+   "lon": 12.532,
+   "count": 1,
+   "names": [
+    "SCHMIDT Auguste, Édouard"
+   ]
+  },
+  {
    "place": "Annecy  par les GMR groupes mobiles de réserve",
-   "lat": 46.05,
-   "lon": 6.4,
+   "lat": 45.8906432566,
+   "lon": 6.12551773598,
    "count": 1,
    "names": [
     "SCHMIDT Hugo"
@@ -1008,8 +1126,8 @@
   },
   {
    "place": "citadelle d’Amiens  suite à une condamnation à mort",
-   "lat": 49.95,
-   "lon": 2.3,
+   "lat": 49.9009532186,
+   "lon": 2.29007445539,
    "count": 1,
    "names": [
     "SEIGNEURGENS Maurice"
@@ -1017,8 +1135,8 @@
   },
   {
    "place": "prison d’Évreux",
-   "lat": 49.1,
-   "lon": 1.0,
+   "lat": 49.02015421,
+   "lon": 1.14164412464,
    "count": 1,
    "names": [
     "SEMARD Pierre, Victor"
@@ -1026,17 +1144,17 @@
   },
   {
    "place": "Angers",
-   "lat": 47.4,
-   "lon": -0.55,
+   "lat": 47.476837416,
+   "lon": -0.556125995444,
    "count": 1,
    "names": [
     "TIGEOT Adrien. Pseudonyme dans la Résistance : Didi"
    ]
   },
   {
-   "place": "Carmaux  d’après l’état civil",
-   "lat": 43.8,
-   "lon": 2.15,
+   "place": "Carmaux  d’",
+   "lat": 44.0566667256,
+   "lon": 2.16641418483,
    "count": 1,
    "names": [
     "TROUSSEL Jacques, André"
@@ -1044,17 +1162,26 @@
   },
   {
    "place": "Barre-de-Semilly",
-   "lat": 49.08,
-   "lon": -1.3,
+   "lat": 49.1063271499,
+   "lon": -1.01818230779,
    "count": 1,
    "names": [
     "TURMEAU Jean, Georges  [Pseudonyme dans la Résistance : Alfred Ottino]"
    ]
   },
   {
+   "place": "Châlons-sur-Marne",
+   "lat": 46.9913891791,
+   "lon": -1.71864413598,
+   "count": 1,
+   "names": [
+    "VANSEVEREN Louis, André"
+   ]
+  },
+  {
    "place": "Corcieux",
-   "lat": 48.2,
-   "lon": 6.4,
+   "lat": 48.1672306852,
+   "lon": 6.88469743225,
    "count": 1,
    "names": [
     "VICHARD René, Jean, Baptiste"

@@ -67,9 +67,12 @@
     <section class="panel" id="carte">
       <h2>Géographie des exécutions</h2>
       <p class="explain">
-        Les lieux d'exécution sont identifiés dans les notices puis géolocalisés : sites connus
-        (Mont-Valérien, Châteaubriant, camp de Souge, citadelle d'Arras…) en coordonnées précises,
-        sinon au centre du département cité. Le rayon est proportionnel au nombre de fusillés du corpus.
+        Les lieux d'exécution sont extraits des notices (« fusillé le… à… ») puis géolocalisés à la
+        commune près : grands sites connus (Mont-Valérien, Châteaubriant, camp de Souge, citadelle
+        d'Arras…) en coordonnées propres, et surtout résolution du nom de ville via le référentiel
+        officiel des communes françaises (le département cité levant les homonymes) ; le centroïde
+        départemental ne sert plus que de dernier recours. Le rayon est proportionnel au nombre de
+        fusillés du corpus.
       </p>
       <div id="map"></div>
       <p class="hint" id="map-note"></p>

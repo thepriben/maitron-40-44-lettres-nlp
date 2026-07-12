@@ -15,10 +15,12 @@ Python » (Éditions ENI), chapitre 13, rafraîchi et étendu.
 """
 
 import json
+import csv
 import re
 import unicodedata
 from collections import Counter, defaultdict
 from datetime import date, datetime, timezone
+from functools import lru_cache
 from pathlib import Path
 
 import pandas as pd
@@ -29,6 +31,7 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW_CSV = ROOT / "data" / "raw.csv"
+COMMUNES_CSV = ROOT / "data" / "communes.csv"
 DOCS_DATA = ROOT / "docs" / "data"
 
 PHRASES = [
@@ -187,7 +190,11 @@ KNOWN_SITES = [
     ("bondues", "Fort de Bondues", 50.7010, 3.0940),
     ("la blisière", "La Blisière (Juigné-des-Moutiers)", 47.6300, -1.1900),
     ("bois de boulogne", "Bois de Boulogne (Paris)", 48.8700, 2.2500),
+    ("ministère de l'air", "Stand de tir du ministère de l'Air (Paris XVe)", 48.8380, 2.2770),
+    ("ministere de l'air", "Stand de tir du ministère de l'Air (Paris XVe)", 48.8380, 2.2770),
     ("balard", "Stand de tir de Balard (Paris)", 48.8330, 2.2780),
+    ("prison de la santé", "Prison de la Santé (Paris XIVe)", 48.8339, 2.3450),
+    ("la santé", "Prison de la Santé (Paris XIVe)", 48.8339, 2.3450),
     ("issy-les-moulineaux", "Issy-les-Moulineaux", 48.8240, 2.2700),
     ("la doua", "La Doua (Villeurbanne)", 45.7830, 4.8720),
     ("montluc", "Fort de Montluc (Lyon)", 45.7480, 4.8620),
@@ -196,7 +203,13 @@ KNOWN_SITES = [
     ("hambourg", "Hambourg (Allemagne)", 53.5510, 9.9940),
     ("stuttgart", "Stuttgart (Allemagne)", 48.7760, 9.1830),
     ("brandebourg", "Brandebourg (Allemagne)", 52.4120, 12.5320),
+    ("brandenburg", "Brandebourg (Allemagne)", 52.4120, 12.5320),
     ("munich", "Munich (Allemagne)", 48.1370, 11.5750),
+    ("pforzheim", "Pforzheim (Allemagne)", 48.8910, 8.6980),
+    ("breendonk", "Fort de Breendonk (Belgique)", 51.0560, 4.3390),
+    ("berlin", "Berlin (Allemagne)", 52.5200, 13.4050),
+    # Repli générique : exécution à Paris sans site précis identifiable.
+    ("paris", "Paris", 48.8566, 2.3522),
 ]
 
 # Détection de l'engagement dans la notice biographique.
@@ -208,6 +221,99 @@ GROUPS = [
     ("gaulliste / réseaux", re.compile(r"gaulliste|france\s+libre|\bffl\b|réseau|\bsoe\b|bureau\s+central", re.IGNORECASE)),
     ("catholique", re.compile(r"catholique|abbé|prêtre|séminariste|\bjoc\b", re.IGNORECASE)),
 ]
+
+
+# --- Géocodage des lieux d'exécution ---------------------------------------
+# Référentiel officiel des communes françaises (data.gouv, ~35 000 communes)
+# pour résoudre le nom de ville de la notice en coordonnées précises, plutôt
+# que de retomber sur le centroïde du département.
+_COMMUNE_PREFIX = re.compile(
+    r"^(fort|camp|citadelle|champ de tir|stand de tir|stand|dunes?|bois|caserne|"
+    r"prison|maison d arret|polygone|butte|chateau|colline|plaine|carrieres?|mur|"
+    r"terrain|plateau|cimetiere)\s+(de la|de l|du|des|de|d|au|aux|a la|a l|a)\s+",
+    re.IGNORECASE)
+_COMMUNE_QUAL = re.compile(
+    r"\b(apres|comme|sommairement|en represailles?|en representailles|a la suite|"
+    r"pour|avec|par|suite|dit|selon|ou il|le meme|puis)\b.*$")
+_COMMUNE_LEAD = re.compile(
+    r"^(au |a la |a l |a |aux |dans l |dans les |dans la |dans le |sur la |sur le |"
+    r"pres de |pres d |le |la |les )")
+
+
+def _strip_accents(text: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFD", str(text))
+                   if unicodedata.category(c) != "Mn")
+
+
+def _norm_place(text: str) -> str:
+    text = _strip_accents(text).lower()
+    text = re.sub(r"[^a-z0-9]+", " ", text).strip()
+    return re.sub(r"\s+", " ", text)
+
+
+@lru_cache(maxsize=1)
+def _communes() -> dict:
+    """nom normalisé (avec et sans article) -> [(lat, lon, département), …]."""
+    gaz: dict[str, list] = defaultdict(list)
+    if not COMMUNES_CSV.exists():
+        return gaz
+    with COMMUNES_CSV.open(encoding="utf-8") as handle:
+        for row in csv.DictReader(handle):
+            if not row.get("latitude") or not row.get("longitude"):
+                continue
+            rec = (float(row["latitude"]), float(row["longitude"]), row["nom_departement"])
+            for key in {_norm_place(row["nom_commune"]), _norm_place(row["nom_commune_complet"])}:
+                if key:
+                    gaz[key].append(rec)
+    return gaz
+
+
+def _clean_town(raw: str) -> str:
+    town = _norm_place(raw)
+    town = re.split(r"[,;]", town)[0]
+    town = _COMMUNE_QUAL.sub("", town).strip()
+    town = _COMMUNE_PREFIX.sub("", town)
+    town = _COMMUNE_LEAD.sub("", town).strip()
+    return town
+
+
+def geocode_commune(raw: str, dept: str | None):
+    """Résout un libellé de lieu en (lat, lon) via le référentiel des communes."""
+    gaz = _communes()
+    if not gaz:
+        return None
+    dept_norm = _norm_place(dept) if dept else None
+    town = _clean_town(raw)
+    if not town:
+        return None
+    candidates = [town]
+    if " " in town:
+        tokens = [t for t in town.split() if len(t) > 2]
+        candidates += [" ".join(tokens[i:]) for i in range(1, len(tokens))]
+        candidates += tokens[::-1]
+    # 1er passage : exiger la concordance de département (lève les homonymes).
+    if dept_norm:
+        for cand in candidates:
+            for lat, lon, dep in gaz.get(cand, ()):  # type: ignore[union-attr]
+                if _norm_place(dep) == dept_norm:
+                    return (lat, lon)
+    # 2e passage : première correspondance de nom (noms uniques surtout).
+    for cand in candidates:
+        hits = gaz.get(cand)
+        if hits:
+            return (hits[0][0], hits[0][1])
+    return None
+
+
+def display_place(segment: str) -> str | None:
+    place = re.sub(r"\([^)]*\)", "", segment)
+    place = re.split(r"[;,]", place)[0]
+    place = re.sub(r"(?i)\b(après|comme|sommairement|en repr|à la suite|pour|avec|selon|dit)\b.*$", "", place)
+    place = re.sub(
+        r"(?i)^\s*(au\s+|à\s+la\s+|à\s+l['’]|à\s+|aux\s+|dans\s+l['’]|dans\s+les\s+|"
+        r"dans\s+la\s+|dans\s+le\s+|sur\s+la\s+|sur\s+le\s+|près\s+de\s+|près\s+d['’])",
+        "", place.strip())
+    return place.strip(" ,.;") or None
 
 
 def normalize(text: str) -> str:
@@ -260,28 +366,38 @@ def parse_bio(bio: str) -> dict:
         segment = match.group(5) or ""
         segment_lower = segment.lower()
 
+        # Département cité entre parenthèses (sert de désambiguïsation).
+        # On balaie toutes les parenthèses et chaque terme séparé par une virgule
+        # (« (Fontevrault-l'Abbaye, Maine-et-Loire) »).
+        dept = None
+        for paren in DEPT_RE.findall(segment):
+            for part in paren.split(","):
+                candidate = canonical_dept(part)
+                if candidate:
+                    dept = candidate
+                    break
+            if dept:
+                break
+        info["exec_dept"] = dept
+
+        # 1) Grand lieu d'exécution connu -> coordonnées précises.
         for keyword, label, lat, lon in KNOWN_SITES:
             if keyword in segment_lower:
                 info["exec_place"] = label
                 info["exec_lat"], info["exec_lon"] = lat, lon
                 break
 
-        for paren in DEPT_RE.findall(segment):
-            dept = canonical_dept(paren)
-            if dept:
-                info["exec_dept"] = dept
-                if info["exec_lat"] is None:
-                    info["exec_lat"], info["exec_lon"] = DEPT_COORDS[dept]
-                    if info["exec_place"] is None:
-                        place = re.sub(r"\([^)]*\)", "", segment).strip(" ,.")
-                        place = re.sub(
-                            r"^\s*(après\s+condamnation(\s+à\s+mort)?|comme\s+otage|sommairement|en\s+représailles)\s*",
-                            "", place, flags=re.IGNORECASE)
-                        place = re.sub(
-                            r"^\s*(au\s+|à\s+la\s+|à\s+l['’]|à\s+|aux\s+|dans\s+l['’]|dans\s+les\s+|dans\s+la\s+|dans\s+le\s+|sur\s+la\s+|sur\s+le\s+)",
-                            "", place, flags=re.IGNORECASE)
-                        info["exec_place"] = place.split(",")[0].strip(" ,.") or dept
-                break
+        # 2) Résolution du nom de commune via le référentiel officiel.
+        if info["exec_lat"] is None:
+            coords = geocode_commune(re.sub(r"\([^)]*\)", " ", segment), dept)
+            if coords:
+                info["exec_lat"], info["exec_lon"] = coords
+                info["exec_place"] = display_place(segment) or dept
+
+        # 3) Repli : centroïde du département.
+        if info["exec_lat"] is None and dept and dept in DEPT_COORDS:
+            info["exec_lat"], info["exec_lon"] = DEPT_COORDS[dept]
+            info["exec_place"] = display_place(segment) or dept
 
     if info["birth_date"] and info["exec_date"]:
         born = date.fromisoformat(info["birth_date"])
