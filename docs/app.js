@@ -160,10 +160,16 @@ function renderMap(stats) {
   }
   const map = L.map("map", { scrollWheelZoom: false }).setView([47.5, 2.5], 5.4);
   map.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
-    maxZoom: 12,
-  }).addTo(map);
+  L.tileLayer(
+    "https://data.geopf.fr/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile" +
+      "&LAYER=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&STYLE=normal&TILEMATRIXSET=PM" +
+      "&FORMAT=image/png&TILEMATRIX={z}&TILECOL={x}&TILEROW={y}",
+    {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="https://geoservices.ign.fr/">IGN</a> / Géoplateforme',
+    }
+  ).addTo(map);
 
   const maxCount = Math.max(...places.map((p) => p.count));
   places.forEach((p) => {
